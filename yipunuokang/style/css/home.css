@@ -38,7 +38,35 @@
 .margin0 {
 	margin-right: 0px;
 }
+.about-us{
+	margin-top:50px;
+}
+.about-us .sec-img{
+	width: 500px;
+}
 
+.about-us .text{
+	width: 750px;
+	float: right;
+	letter-spacing: 1px;
+	line-height: 32px;
+	color: #666;
+	
+}
+.about-us p{
+	text-indent: 2em;
+}
+.about-us .more{
+	display: inline-block;
+	background: #0063BD;
+	color: #fff;
+	width: 100px;
+	line-height: 36px;
+	height: 36px;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 50px;
+}
 .list .title {
 	display: block;
 	padding: 40px;
@@ -250,17 +278,14 @@
 a.view-more {
 	text-align: center;
 	display: block;
-	text-align: center;
 	margin: 0 auto;
 	width: 100px;
 	height: 36px;
 	line-height: 36px;
-	color: #0D56A7;
-	box-shadow: 0 0px 16px rgba(0,0,0,.3);
-	border-radius: 20px;
-	padding-right: 16px;
-	background: url(../images/arrow_right_blue.png) no-repeat right 10px center;
-	background-size: 24px 24px;
+	color: #fff;
+	background: #006BBF;
+	border-radius: 5px;
+	
 }
 
 .swiper-container {
