@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style/css/base.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/js/vue.min.js"></script>
+		<script type="text/javascript" src="style/js/base.js"></script>
+		<script type="text/javascript" src="style/js/footer.js"></script>
+	</head>
+	<body>
+		<div id="product_details">
+			<menu-bar></menu-bar>
+			
+			<!--产品内容开始-->
+			<div class="wrap background_color">
+				<div class="banner">
+					<img :src="detailsData.bannerPic">
+				</div>
+				<div class="product_details">
+					
+					<h2>{{detailsData.productName}}</h2>
+					<div class="img"><img :src="detailsData.productImg"></div>
+					<div>
+						<h3>检测原理</h3>
+						<div>{{detailsData.theory}}</div>
+						<h3>产品规格</h3>
+						<table>
+							<tr>
+								<th>规格</th>
+								<th>适用机型</th>
+							</tr>
+							<tr>
+								<td>{{detailsData.specification}}</td>
+								<td>{{detailsData.compatible}}</td>
+							</tr>
+							<tr>
+								<th>校准品</th>
+								<th>质控品</th>
+							</tr>
+							<tr>
+								<td>{{detailsData.calibration}}</td>
+								<td>{{detailsData.controlProduct}}</td>
+							</tr>
+						</table>
+						<h3>临床意义</h3>
+						<div v-html="detailsData.clinic"></div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!--产品内容结束-->
+			
+			<!--footer开始-->
+			<footer-nav></footer-nav>
+			<!--footer结束-->
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#product_details",
+			data:{
+				detailsData:{
+					bannerPic:'style/images/banner_product.jpg',
+					productName:'糖化血红蛋白测定试剂盒',
+					productImg:'style/images/product.jpg',
+					theory:'样品中的Hb和HbAlc与胶乳颗粒发生非特异性吸附而固相化，当加入HbAlc特异性抗体后形成胶乳 -HbAlc-抗人HbAlc抗体的复合物，此复合物与抗lgG抗体发生凝集反应产生一定浊度，其浊度高低与胶乳表面固相化的HbAlc量成正相关。',
+					clinic:'<p>糖尿病的早期筛查与诊断</p><p>预测糖尿病慢性并发症的发生</p><p>血糖控制方案效果评估</p>',
+					specification:'R1:1x45ml R2:1x15ml R3：2x65ml',
+					compatible:'各种全自动生化分析仪',
+					calibration:'5x0.5ml',
+					controlProduct:'2x0.5ml'
+				}
+			}
+		})
+	</script>
+</html>

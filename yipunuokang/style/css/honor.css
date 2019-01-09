@@ -1,0 +1,26 @@
+.banner_honor{
+	background-image: url(../images/banner_honor.jpg);
+}
+.honor{
+	padding: 50px 100px;
+}
+.honor li{
+	float: left;
+	width: 290px;
+	height: 370px;
+	border:1px solid #ccc;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	padding: 20px 10px;
+}
+.honor img{
+	height: auto;
+	margin-bottom: 10px;
+}
+.honor p{
+	text-align: left;
+	text-indent: 0em;
+	line-height: 26px;
+	padding: 0px;
+}

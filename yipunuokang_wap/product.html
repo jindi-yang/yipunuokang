@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style/css/base.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/js/vue.min.js"></script>
+		<script type="text/javascript" src="style/js/base.js"></script>
+		<script type="text/javascript" src="style/js/footer.js"></script>
+	</head>
+
+	<body>
+		<div id="product" >
+			<menu-bar></menu-bar>
+			
+			<div class="wrap background_color">
+				<div class="banner">
+					<img :src="productData.bannerPic">
+				</div>
+				<div class="title">
+					<h2>{{productData.title}}</h2>
+					<span class="tips_words">{{productData.englishName}}</span>
+				</div>
+				<div class="news">
+					<ul class="clearfix">
+						<li>
+							<a href=""><img src="style/images/product_icon_1.png">系列产品</a>
+						</li>
+						<li>
+							<a href=""><img src="style/images/product_icon_2.png">特色产品</a>
+						</li>
+						<li>
+							<a href=""><img src="style/images/product_icon_3.png">新品推荐</a>
+						</li>
+						<li>
+							<a href=""><img src="style/images/product_icon_4.png">其他产品</a>
+						</li>
+					</ul>
+				</div>
+				<div class="product sec">
+					<ul>
+						<li class="clearfix" v-for="(item,index) in productData.productList" :key="index">
+							<a href="product_details.html">
+								<div class="sec_img">
+									<img :src="item.productImg">
+								</div>
+								<div class="sec_text">
+									<p>{{item.productName}}</p>
+									<span>{{item.productMethod}}</span>
+									<span>{{item.name}}</span>
+									<span>查看详情</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+
+				<div class="page">
+					<ul class="clearfix">
+			        	<li v-if="cur>1"><a v-on:click="cur--,pageClick()"><span>«</span></a></li>
+			        	<li v-if="cur==1"><a class="banclick"><span>«</span></a></li>
+			        	<li v-for="index in indexs"  v-bind:class="{ 'active': cur == index}">
+			            	<a v-on:click="btnClick(index)">{{ index }}</a>
+			       		</li>
+			        	<li v-if="cur!=all"><a v-on:click="cur++,pageClick()"><span>»</span></a></li>
+			        	<li v-if="cur == all"><a class="banclick"><span>»</span></a></li>
+			        	<li><a>共<i>{{all}}</i>页</a></li>
+			  		</ul>		
+			    </div>
+			    
+			</div>
+
+			<!--footer开始-->
+			<footer-nav></footer-nav>
+			<!--footer结束-->
+
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#product",
+			data:{
+				all:8,
+				cur:1,
+				productData:{
+					bannerPic:'style/images/banner_product.jpg',
+					title:'产品与服务',
+					englishName:'PRODUCT SERVICES',
+					productList:[
+						{
+							id:1,
+							productName:'糖化血红蛋白测定试剂盒',
+							productMethod:'免疫比浊法',
+							name:'HbA1c',
+							productImg:'style/images/product.jpg',
+							category:'特色产品'
+						},
+						{
+							id:2,
+							productName:'心型脂肪酸结合蛋白测定试剂盒',
+							productMethod:'胶乳增强免疫比浊法',
+							name:'H-FABP',
+							productImg:'style/images/product.jpg',
+							category:'特色产品'
+						},
+						{
+							id:3,
+							productName:'尿微量白蛋白测定试剂盒',
+							productMethod:'免疫比浊法',
+							name:'mALB',
+							productImg:'style/images/product.jpg',
+							category:'特色产品'
+						},
+						{
+							id:4,
+							productName:'胃蛋白酶原Ⅰ、Ⅱ测定试剂盒',
+							productMethod:'胶乳增强免疫比浊法',
+							name:'PG-Ⅰ、PG-Ⅱ',
+							productImg:'style/images/product.jpg',
+							category:'特色产品'
+						}
+					]
+				}
+			},
+			computed: {
+		        indexs: function(){
+		          	var left = 1;
+		         	var right = this.all;
+		          	var ar = [];
+		          	if(this.all>= 4){
+		            	if(this.cur > 3 && this.cur < this.all-2){
+		                    left = this.cur - 2
+		                    right = this.cur + 2
+		            	}else{
+		                	if(this.cur<=3){
+		                   		left = 1
+		                    	right = 4
+		                	}else{
+		                    	right = this.all
+		                    	left = this.all -4
+		                	}	
+		            	}
+		         	}
+		        	while (left <= right){
+		            	ar.push(left)
+		            	left ++
+		        	}
+		        	return ar
+		    	}
+		    },
+		    methods: {
+        		btnClick: function(data){//页码点击事件
+            		if(data != this.cur){
+                		this.cur = data 
+            		}
+        		},
+        		pageClick: function(){
+            		//console.log('现在在'+this.cur+'页');
+        		}
+    		}
+		    
+		    
+		})
+	</script>
+
+</html>

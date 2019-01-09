@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style/plugin/Swiper/css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" href="style/css/base.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/js/vue.min.js" ></script>
+		<script type="text/javascript" src="style/js/jquery-3.3.1.js" ></script>
+		<script type="text/javascript" src="style/plugin/Swiper/js/swiper.min.js" ></script>
+		<script type="text/javascript" src="style/js/base.js" ></script>
+		<script type="text/javascript" src="style/js/footer.js" ></script>
+	</head>
+	<body>
+		
+		<div id="home">
+			<menu-bar></menu-bar>
+		
+			<!--轮播图开始-->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="style/images/swiper1.jpg"/></div>
+					<div class="swiper-slide"><img src="style/images/swiper1.jpg"/></div>
+					<div class="swiper-slide"><img src="style/images/swiper1.jpg"/></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<!--轮播图结束-->
+			
+			<!--产品开始-->
+			<div class="wrap background_color">
+				<div class="title">
+					<h2>产品与服务</h2>
+					<span class="tips_words">PRODUCT SERVICES</span>
+				</div>
+				<div class="home_product clearfix">
+					<a href="">
+						<div class="fl home_txt">
+							<span>产品与服务</span>
+							<span>公司现有注册生化试剂产品82项，涵盖肝功能、肾功能、心肌标志物、血脂、糖代谢、特种蛋白、肿瘤等品类。</span>
+							<span>查看更多 →</span>
+						</div>
+						<div class="fr home_img">
+							<img src="style/images/product_img_1.png">
+						</div>
+					</a>
+					<a href="">
+						<div class="fl home_img">
+							<img src="style/images/product_img_2.png">
+						</div>
+						<div class="fr home_txt" style="background: #E89300;">
+							<span>产品与服务</span>
+							<span>公司自主研发的特定蛋白分析仪、生化分析仪等产品即将取得注册证。</span>
+							<span>查看更多 →</span>
+						</div>
+						
+					</a>
+				</div>
+				
+			</div>
+			<!--产品结束-->
+			
+			
+			<!--公司简介开始-->
+			<div class="wrap background_color">
+				<div class="title">
+					<h2>公司简介</h2>
+					<span class="tips_words">COMPANY PROFILE</span>
+				</div>
+				<div class="company">
+					<div>
+						<img src="style/images/company_pic.jpg">
+					</div>
+					<div class="text">
+						【伊普诺康】成立于2012年，是体外诊断行业内一家集研发、生产、销售和医学检验服务为一体的国家级高新技术企业。
+						公司现有注册产品100余项，涵盖肝功能、肾功能、心肌标志物、血脂、糖代谢、特种蛋白、肿瘤等品类，其中16个特色项目处于行业领先地位。此外，公司自主研发的特定蛋白分析仪、生化分析仪等产品即将取得注册证。
+						2016年2月，公司“新三板”挂牌。挂牌以来，公司先后与多家知名机构建立了战略合作关系，为公司的发展不断注入资本活力。
+					</div>
+				</div>
+				<div class="more_btn"><a href="about.html">查看更多</a></div>
+			</div>	
+			<!--公司简介结束-->
+			
+			
+			
+			<!--新闻-->
+			<div class="wrap background_color home">
+				<div class="title">
+					<h2>企业新闻</h2>
+					<span class="tips_words">ENTERPRISE NEWS</span>
+				</div>
+				<div class="sec">
+					<ul>
+						<li v-for="(item,index) in newsData" :key="index" class="clearfix">
+							<a href="">
+								<div class="sec_img">
+									<img :src="item.img">
+								</div>
+								<div class="sec_text">
+									<p>{{item.newsTitle}}</p>
+									<span>{{item.time}}</span>
+									<span class="sec_more">MORE</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="more_btn"><a href="news.html">查看更多</a></div>
+				</div>
+			</div>	
+			<!--新闻结束-->
+			
+		
+		
+		
+			<!--footer开始-->
+			<footer-nav></footer-nav>
+			<!--footer结束-->
+
+	</div>
+	
+	</body>
+	<script>
+		new Vue({
+			el:"#home",
+			data:{
+				newsData:[
+					{
+						id:1,
+						newsTitle:'校企携手共努力，互惠共赢创未来 ——记伊普诺康与安徽理工大学战略合作签约',
+						img:'style/images/news_wap.png',
+						time:'2018/12/29'
+					},
+					{
+						id:2,
+						newsTitle:'重磅！伊普诺康和润达医疗达成“GPO”战略合作',
+						img:'style/images/news_1.png',
+						time:'2018/12/29'
+					},
+					{
+						id:3,
+						newsTitle:'伊普诺康乔迁誌禧',
+						img:'style/images/company.jpg',
+						time:'2018/12/29'
+					}	
+				]
+			},
+			methods:{
+				
+			}
+			
+		})
+		
+		
+		
+		//swiper
+		var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 30,
+			centeredSlides: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		});
+	</script>
+</html>

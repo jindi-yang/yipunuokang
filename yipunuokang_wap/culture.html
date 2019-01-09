@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style/css/base.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/js/vue.min.js" ></script>
+		<script type="text/javascript" src="style/js/base.js" ></script>
+		<script type="text/javascript" src="style/js/footer.js" ></script>
+	</head>
+	<body>
+		<div id="culture">
+			<menu-bar></menu-bar>
+		
+		
+			<!--文化开始-->
+			<div class="wrap background_color" id="culture">
+				<div class="banner">
+					<img src="style/images/banner_about.jpg">
+				</div>
+				<div class="title">
+					<h2>企业文化</h2>
+					<span class="tips_words">CORPORTATE CULTURE</span>
+				</div>
+				<div v-for="(item,index) in cultureDate" :key="index">
+					<div class="culture">
+						<div class="clearfix feature">
+							<div class="pic">
+								<img :src=item.img>
+								<h2>{{item.title}}<i>{{item.englishName}}</i><span>{{item.tipsWords}}</span></h2>
+							</div>
+							<div class="info">
+								<div class="txt" v-html="item.des"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!--文化结束-->
+			
+			
+			
+			<!--footer开始-->
+			<footer-nav></footer-nav>
+			<!--footer结束-->
+		
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#culture',
+			data:{
+				cultureDate:[
+					{
+						id:1,
+						englishName:'PURPOSE',
+						title:'宗旨',
+						img:'style/images/culture_1.jpg',
+						tipsWords:'创新生物科技   增进人类福祉',
+						des:'这是伊普诺康人对社会的庄严承诺，伊普诺康最终的目的是为了实现对社会和人类的回报，不断创新，促进人类与自然之间的和谐共存，通过先进的科技技术，依靠广大伊普诺康人的辛勤付出，让伊普诺康人成为造福社会的“光源”与“热源”。伊普宗旨是伊普诺康存在和发展的理由，无论伊普诺康身处顺境逆境，都将秉承这一宗旨，作为伊普诺康发展的终极使命。'
+					},
+					{
+						id:2,
+						englishName:'VISION',
+						title:'愿景',
+						img:'style/images/culture_2.jpg',
+						tipsWords:'为每个人的生命健康作出贡献',
+						des:'为他人减轻痛苦、为他人带来欢乐，尊重生命的质量，为了这样的目标，我们创办了企业，朴实地践行我们最基本的责任，脚踏实地，从现在做起，从一点一滴做起，珍爱生命，维护人类生命健康，不断延伸生命的价值。我们创导，企业存在的意义不仅仅是盈利，而在于内涵：为社会所做的贡献。'
+					},
+					{
+						id:3,
+						englishName:'VALUE',
+						title:'核心价值观',
+						img:'style/images/culture_3.jpg',
+						tipsWords:'诚信立足 创新取胜 以人为本 共赢共荣',
+						des:'诚信，创业立足之本；创新，企业成长希望；人才，企业发展灵魂。这就要求我们时刻认识：一个中心、二个提高、三个提升。即以发展为中心，提高管理水平、提高创新能力，提升服务水平、提升团队素质、提升品牌价值，最终达成企业与社会的共同进步、企业与员工的共同发展。'
+					},
+					{
+						id:4,
+						englishName:'PURPOSE',
+						title:'人生信条',
+						img:'style/images/culture_4.jpg',
+						tipsWords:'创新生物科技   增进人类福祉',
+						des:'<p>和谐：员工、企业、社会和谐，是一种相对均衡、统一、协调、无根本利害冲突的状态，使人与人、人与企业、企业与社会之间处于相互尊重、相互信任、相互理解的一种美好状态。</p><p>进取：逆水行舟，不进则退。安于现状，不思进取是不负责任的表现。要想实现企业的远大目标，必须永不满足，超越无限。</p><p>责任：时刻牢记企业的社会责任，经营回报股东的责任，公司对员工、员工对企业的责任。</p><p>奉献：牢记我们的社会责任，用我们的产品与服务，服务于人类的生命安全和健康。甘于奉献是一种精神境界，心怀感恩，报效企业，回报社会。</p>'
+					}
+				]
+			}
+		})
+	</script>
+</html>

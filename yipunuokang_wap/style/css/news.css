@@ -1,0 +1,31 @@
+.detail_content{
+	padding: 20px 10px;
+	background: #fff;
+	box-sizing: border-box;
+}
+.detail_content h1 {
+    color: #2a2a2a;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.detail_content .detail_time {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #878787;
+    font-size: 12px;
+    text-align: center;
+}
+.detail_box p{
+	line-height: 24px;
+	text-indent: 2em;
+	letter-spacing: 1px;
+	color: #666;
+}
+.detail_box>div{
+	text-align: center;
+	margin: 10px 0;
+}
+

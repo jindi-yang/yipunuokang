@@ -1,0 +1,38 @@
+
+.top-banner{
+	background-image: url(../images/banner_about.jpg);
+}
+
+.wrap p{
+	line-height: 34px;
+    padding: 0 20px;
+    text-indent: 2em;
+    color: #666;
+}
+.about ul{
+	width: 760px;
+	margin: 30px auto;
+	
+}
+.about li{
+	float: left;
+	width: 365px;
+	height: 340px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	position: relative;
+}
+.about .mask{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #1a355e;
+	opacity: .8;
+	background-color: rgba(26,53,94,0.8);
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+}
+

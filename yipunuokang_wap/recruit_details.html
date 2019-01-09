@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style/css/base.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/js/jquery-3.3.1.js" ></script>
+		<script type="text/javascript" src="style/js/vue.min.js" ></script>
+		<script type="text/javascript" src="style/js/base.js" ></script>
+		<script type="text/javascript" src="style/js/footer.js" ></script>
+	</head>
+	<style>
+		.show{
+			display: none;
+		}
+	</style>
+	<body>
+		<div id="recruitDetails">
+			<menu-bar></menu-bar>
+		
+		
+		
+			<div class="wrap background_color">
+				<div class="banner">
+					<img src="style/images/banner_hr.jpg">
+				</div>
+				<div class="title">
+					<h2>{{recruitData.title}}</h2>
+					<span class="tips_words">{{recruitData.englishName}}</span>
+				</div>
+				<div class="table_style">
+					<ul>
+						<li>
+							<dl>
+								<dt>
+									<span>职位名称</span>
+									<span>职位地点</span>
+									<span>发布时间</span>
+								</dt>
+							</dl>
+						</li>
+						<li v-for="(item,index) in recruitData.recruits">
+							<dl class="list" @click="showDetails(index)">
+								<dt>
+									<span>{{item.jobsName}}</span>
+									<span>{{item.workPlace}}</span>
+									<span>{{item.hiringTime}}</span>
+								</dt>
+								<dd v-html="item.recruitDes" v-if="item.selected"></dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="page">
+					<ul class="clearfix">
+						<li class="disabled">
+							<a href="javascript:;"><span>«</span></a>
+						</li>
+						<li class="active">
+							<a href="javascript:;">1</a>
+						</li>
+						<li>
+							<a href="javascript:;">2</a>
+						</li>
+						<li>
+							<a href="javascript:;">3</a>
+						</li>
+						<li>
+							<a href="javascript:;">···</a>
+						</li>
+						<li>
+							<a href="javascript:;">9</a>
+						</li>
+						<li>
+							<a href="javascript:;"><span>»</span></a>
+						</li>
+					</ul>
+				</div>			
+				
+				
+				<div class="recruit_contact">
+					<h2>招聘联系</h2>
+					<p>招聘热线：15256584919-宋经理</p>
+					<p>邮箱：songkui5188@163.com</p>
+					<div class="attention"><img src="style/images/weixin.png"></div>
+					<p>更多职位详情扫描二维码</p>
+					<p>关注伊普诺康官方微信的人力资源版块</p>
+				</div>
+	
+			</div>
+			
+			
+			
+			<!--footer开始-->
+			<footer-nav></footer-nav>
+			<!--footer结束-->
+		
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#recruitDetails",
+			data:{
+				
+				recruitData:{
+					id:1,
+					title:'人力资源',
+					englishName:'HUMAN RESOURCE',
+					recruits:[
+						{
+							id:12,
+							jobsName:'研发总监（经理）',
+							workPlace:'浙江省及全国市场',
+							selected:false,
+							hiringTime:'2012-12-06',
+							recruitDes:'<p>职位描述 ：</p><p>1、负责公司生化试剂的售后服务，为客户提供必要的技术指导和培训，包括电话及现场技术支持；</p><p>2、负责制作公司产品的相关技术文档； </p><p>3、负责公司产品使用情况收集报告； </p><p>4、负责市场竞争产品的信息收集报告；</p><p>5、公司安排的其他工作。</p><p>职位要求：</p><p>1、身体健康，品行端正，勤奋诚信；</p><p>2、大专及以上学历，医学检验专业毕业； </p><p>3、具备优秀的学习能力和沟通能力； </p><p>4、擅于与人沟通和交流，服务意识强；</p><p>5、能够适应经常出差；</p><p>6、熟悉临床生化分析仪及生化诊断试剂，有同等职位相关工作经验者优先考虑；</p>'
+						},
+						{
+							id:1232,
+							jobsName:'产品经理（专员）',
+							workPlace:'浙江省及全国市场',
+							selected:false,
+							hiringTime:'2012-12-06',
+							recruitDes:'<p>职位描述 ：</p><p>1、负责公司生化试剂的售后服务，为客户提供必要的技术指导和培训，包括电话及现场技术支持；</p><p>2、负责制作公司产品的相关技术文档； </p><p>3、负责公司产品使用情况收集报告； </p><p>4、负责市场竞争产品的信息收集报告；</p><p>5、公司安排的其他工作。</p><p>职位要求：</p><p>1、身体健康，品行端正，勤奋诚信；</p><p>2、大专及以上学历，医学检验专业毕业； </p><p>3、具备优秀的学习能力和沟通能力； </p><p>4、擅于与人沟通和交流，服务意识强；</p><p>5、能够适应经常出差；</p><p>6、熟悉临床生化分析仪及生化诊断试剂，有同等职位相关工作经验者优先考虑；</p>'
+						},
+						{
+							id:132,
+							jobsName:'品牌经理（企划经理）',
+							workPlace:'浙江省及全国市场',
+							selected:false,
+							hiringTime:'2012-12-06',
+							recruitDes:'<p>职位描述 ：</p><p>1、负责公司生化试剂的售后服务，为客户提供必要的技术指导和培训，包括电话及现场技术支持；</p><p>2、负责制作公司产品的相关技术文档； </p><p>3、负责公司产品使用情况收集报告； </p><p>4、负责市场竞争产品的信息收集报告；</p><p>5、公司安排的其他工作。</p><p>职位要求：</p><p>1、身体健康，品行端正，勤奋诚信；</p><p>2、大专及以上学历，医学检验专业毕业； </p><p>3、具备优秀的学习能力和沟通能力； </p><p>4、擅于与人沟通和交流，服务意识强；</p><p>5、能够适应经常出差；</p><p>6、熟悉临床生化分析仪及生化诊断试剂，有同等职位相关工作经验者优先考虑；</p>'
+						},
+						{
+							id:123232,
+							jobsName:'业务精英',
+							workPlace:'浙江省及全国市场',
+							selected:false,
+							hiringTime:'2012-12-06',
+							recruitDes:'<p>职位描述 ：</p><p>1、负责公司生化试剂的售后服务，为客户提供必要的技术指导和培训，包括电话及现场技术支持；</p><p>2、负责制作公司产品的相关技术文档； </p><p>3、负责公司产品使用情况收集报告； </p><p>4、负责市场竞争产品的信息收集报告；</p><p>5、公司安排的其他工作。</p><p>职位要求：</p><p>1、身体健康，品行端正，勤奋诚信；</p><p>2、大专及以上学历，医学检验专业毕业； </p><p>3、具备优秀的学习能力和沟通能力； </p><p>4、擅于与人沟通和交流，服务意识强；</p><p>5、能够适应经常出差；</p><p>6、熟悉临床生化分析仪及生化诊断试剂，有同等职位相关工作经验者优先考虑；</p>'
+						}
+					]
+				}
+			},
+			methods:{
+				showDetails(index){
+					this.recruitData.recruits[index].selected = ! this.recruitData.recruits[index].selected
+				}
+			}
+		})
+	
+	</script>
+</html>

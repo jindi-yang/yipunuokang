@@ -1,0 +1,96 @@
+
+.top-banner{
+	background-image: url(../images/banner_about.jpg);
+	
+}
+.about{
+	background: #fff;
+	padding: 30px 50px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.about h2{
+	line-height: 50px;
+	color: #0063bd;
+	font-size: 34px;
+}
+.about h3{
+	font-size: 28px;
+	color: #666;
+}
+.about p{
+	margin-top: 15px;
+	margin-bottom:30px;
+	font-size: 14px;
+}
+
+.about .left{
+	float: left;
+	width: 300px;
+	background: #8AD0C5;
+	background: #0063bd;
+	color: #fff;
+	padding: 20px;
+	
+}
+.about .left span{
+	display: block;
+	padding-left: 46px;
+	line-height: 24px;
+}
+.about .left>div{
+	padding: 20px 0;
+	border-bottom: 1px dashed #fff;
+}
+.about .address{
+	background: url(../images/address.png) no-repeat left center;
+	background-size: 42px 42px;
+	
+}
+.about .tel{
+	background: url(../images/tel.png) no-repeat left center;
+	background-size: 42px 42px;
+}
+.about div.fax{
+	background: url(../images/fax.png) no-repeat left center;
+	background-size: 42px 42px;
+	border-bottom: none;
+}
+.about .form{
+	float: right;
+	background: #f2f2f2;
+	width: 630px;
+	padding: 30px;
+}
+.about input,
+.about textarea{
+	border:1px solid #0063bd;	
+	font-size: 14px;
+	background: #fff;
+	padding:10px;
+	margin-bottom: 15px;
+}
+.about input{
+	width: 280px;
+	line-height: 24px;
+	height: 24px;	
+	margin-right: 10px;	
+}
+.about textarea{
+	width: 600px;
+	line-height: 24px;
+}
+.about .form a{
+	display: block;
+	width: 100px;
+	height: 42px;
+	line-height: 42px;
+	color: #fff;
+	text-align: center;
+	background: #F2A94B;
+	border-radius: 5px;
+}
+.banner_contact{
+	background-image: url(../images/banner_contact.jpg);
+}

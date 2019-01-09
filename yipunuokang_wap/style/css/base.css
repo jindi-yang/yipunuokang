@@ -1,0 +1,366 @@
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, 
+form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, 
+menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 14px 'Microsoft YaHei','宋体', Tahoma, Arial, sans-serif;
+    background-color: #f2f2f2;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+em, i {
+    font-style: normal;
+}
+img{
+	border: 0;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+ul,li{
+    list-style-type: none;
+}
+strong {
+    font-weight: normal;
+}
+table{
+    width:100%;
+    text-align:center;/*文本居中*/
+    border-collapse:collapse; /*表格的边框合并，如果相邻，则共用一个边框*/
+    border-spacing:0; /*设置行与单元格边框的间距。当表格边框独立（即border-collapse:separate;）此属性才起作用*/
+}
+table td{
+    word-break: break-all; /*允许在字内换行,即单词可分*/
+    word-wrap:break-word;/*允许长单词或URL地址换行*/
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc; 
+    font:500 12px Arial;
+}
+h1,h2,h3,h4,h4{
+	font-size: 14px;
+}
+
+a,
+a:hover{
+	text-decoration: none;
+	color: #666;
+}
+
+a,a:hover,a:active,a:visited,a:link,a:focus{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline:none;
+    background: none;
+    text-decoration: none;
+}
+input,
+button,
+select,
+textarea {
+	-webkit-appearance: none;
+	/*去除input默认样式*/
+	outline: none;
+	/*去除边框*/
+}
+textarea {
+	border: none;
+	resize: none;
+	/*不可拖拽*/
+}
+button,
+input,
+select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
+	border: none;
+	text-align: center;
+	background: none;
+	text-align: start;
+	text-indent: 0px;
+	font-size: 16px;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix:after{
+	content: ".";
+	clear: both;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	height: 0;
+	*zoom:1;
+}
+.hide{
+	display: none;
+}
+
+.small-txt{
+	color: #999;	
+	font-size: 12px;
+}
+
+
+.disabled{
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
+
+.tips_words{
+	display: block;
+	margin-top: 6px;
+	color: #666;
+	letter-spacing: 3px;
+	font-size: 12px;
+}
+
+
+/*header*/
+.header{
+	width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #fff;
+    -webkit-transition: left cubic-bezier(.18,1,.21,1) .5s;
+    transition: left cubic-bezier(.18,1,.21,1) .5s;
+  
+}
+.header.boxShadowStyle{
+	box-shadow:0 2px 30px rgba(0,0,0,.2);
+}
+.logo{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.logo img{
+	width: 120px;
+	height: 36px;
+}
+.nav_btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    padding: 5px;
+    background: url(../images/nav_icon.png) no-repeat;
+    background-size: 26px 26px;
+    transition: all .3s ease;
+}
+.nav_btn.close{
+	transition: all .3s ease;
+	background: url(../images/close_icon.png) no-repeat;
+    background-size: 26px 26px;
+}
+.nav_show{
+	box-sizing: border-box;
+	position: fixed;
+    top: 50px;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+   transition: all cubic-bezier(.18,1,.21,1) .5s;
+    background: #fff;
+   /* display: none;*/
+}
+.nav_show a{
+	display: block;
+	
+}
+.nav_show span{
+	display: block;
+	color: #666;
+}
+.nav_show>ul>li {
+    line-height: 42px;
+    padding: 0 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+    box-sizing: border-box;
+  	position: relative;
+  	
+}
+.nav_show>ul>li ul li {
+    font-size: 12px;
+    color: #666;
+    line-height: 30px;
+}
+.nav_show>ul>li ul {
+    padding: 0 25px;
+    margin: 0;
+    padding-bottom: 15px;
+   /* display: none;*/
+}
+.nav_show .selectArrow::after{
+	display: block;
+	content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    position: absolute;
+    top: 25px;
+    margin-top: -6px;
+    right: 20px
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .6s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active, 2.1.8 版本以下 */ {
+    opacity: 0
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide img{
+	width: 100%;
+	height: 260px;
+}
+.footer {
+    width: 100%;
+    background: #0063bd;
+}
+.footer .contact_info{
+	color: #fff;
+	line-height: 26px;
+	padding: 20px 20px 10px 20px;
+}
+.footer .foot_b{
+	width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.foot_b>ul{
+	display: inline-block;
+}
+.foot_b>ul li {
+    float: left;
+    color: #e1e1e1;
+    font-size: 13px;
+    padding: 0 15px;
+}
+.foot_b li a{
+	color: #fff;
+}
+.foot_b>p {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #e1e1e1;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+    padding: 0 20px;
+}
+/*标题common*/
+/*.wrap{
+	padding-bottom: 30px;
+}*/
+.wrap .title{
+	padding: 20px 0;
+	text-align: center;
+}
+.banner{
+	width: 100%;
+	margin-top: 50px;
+}
+.background_color{
+	background: #fff;
+	padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/*联系我们*/
+.contact,.form{
+	padding: 0 20px 30px 20px;
+}
+.contact>div{
+	line-height: 26px;
+	color: #666;
+}
+.form h5{
+	font-size: 14px;
+}
+.form>div{
+	font-size: 14px;
+	color: #666;
+	margin: 10px 0 20px 0px;
+}
+.form li{
+	border: 1px solid #0d56a7;
+    height: 36px;
+    padding: 0px 10px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.form li:last-child{
+	height: 100px;
+}
+.form li em{
+	font-size: 12px;
+    font-style: normal;
+    color: #666;
+    position: absolute;
+    top: 8px;
+}
+.form input{
+    height: 100%;
+    background: transparent;
+    line-height: 36px;
+    padding-left: 70px;
+}
+.form img{
+	width: 18px;
+	height: 18px;
+	position: absolute;
+    top: 8px;
+    right: 10px
+}
+.form i{
+	color: #e95b49;
+    margin-right: 6px;
+    font-style: normal;
+}
+.form textarea{
+    width: 100%;
+    height: 60px;
+    border: none;
+    margin-top: 30px;
+}
+.form a{
+	display: block;
+}
+.form input[type=button]{
+	width: 100%;
+	height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #0d56a7;
+    color: #fff;
+    padding-left: 0px;
+}

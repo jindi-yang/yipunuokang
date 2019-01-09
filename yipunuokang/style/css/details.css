@@ -1,0 +1,31 @@
+.top-banner{
+	background-image: url(../images/banner_about.jpg);
+}
+.wrap{
+	text-align: center;
+}
+.wrap .navigation{
+	text-align: left;
+}
+.wrap h2{
+	text-align: center;
+	line-height: 50px;
+	font-size: 26px;
+}
+.wrap p{
+	line-height: 24px;
+	letter-spacing: 1px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.wrap img{
+	width: 600px;
+	margin-bottom: 10px;
+}
+.wrap .describe{
+	margin-bottom: 20px;
+}
+.small-txt{
+	margin-bottom: 40px;
+	font-size: 14px;
+}

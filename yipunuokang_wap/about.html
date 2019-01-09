@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style/css/base.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/js/vue.min.js" ></script>
+		<script type="text/javascript" src="style/js/base.js" ></script>
+		<script type="text/javascript" src="style/js/footer.js" ></script>
+	</head>
+	<body>
+		
+		<div id="about">
+			
+			<menu-bar></menu-bar>
+		
+		
+			<!--内容开始-->
+			<div class="wrap background_color">
+				<div class="banner">
+					<img :src="aboutData.bannerPic">
+				</div>
+				<div class="about_txt">
+					<p>【安徽伊普诺康生物技术股份有限公司】是一家集研发、生产、销售、服务为一体的国家级高新技术企业，自创立以来，一直致力于做精做强，不断完善公司的产业布局。</p>
+					<p>	公司现有注册生化试剂产品82项，涵盖肝功能、肾功能、心肌标志物、血脂、糖代谢、特种蛋白、肿瘤等品类。其中19项特色产品处于行业领先地位。其中，小而密低密度脂蛋白胆固醇（sdLDL-C）、补体C1q、血清淀粉样蛋白A（SAA）、甘胆酸（CG）、IV型胶原蛋白（COL IV）、特异性生长因子（TSGF）、心型脂肪酸结合蛋白（H-FABP）等特色产品能有效满足临床对新检验项目的需求，销量保持强劲增长势头。此外，包括特定蛋白分析仪和生化分析仪在内的在注册产品达20余项，值得一提的是，公司自主研发的特定蛋白分析仪（POCT）将于2019年初上市，公司蛋白类特色项目均可与该仪器配套使用，能有效满足各级医院的实际需求，市场前景看好。</p>
+				</div>
+				<div class="about">
+					<ul class="clearfix">
+						<li v-for="(item,index) in aboutData.listData" :key="index">
+							<a :href="item.links">
+								<img :src="item.img">
+							</a>
+							<div class="mask"><span>{{item.title}}</span></div>
+						</li>
+					</ul>					
+				</div>
+			</div>
+			<!--内容结束-->
+		
+		
+			<!--footer开始-->
+			<footer-nav></footer-nav>
+			<!--footer结束-->
+		
+		</div>
+		
+	</body>
+	<script>
+		new Vue({
+			el:"#about",
+			data:{
+				aboutData:{
+					bannerPic:'style/images/banner_about.jpg',
+					listData:[
+						{
+							id:1,
+							title:'企业介绍',
+							img:'style/images/generalize.jpg',
+							links:'company_info.html'
+						},
+						{
+							id:2,
+							title:'发展历程',
+							img:'style/images/about.jpg',
+							links:'develop.html'
+						},
+						{
+							id:3,
+							title:'企业文化',
+							img:'style/images/culture.jpg',
+							links:'culture.html'
+						},
+						{
+							id:4,
+							title:'企业荣誉',
+							img:'style/images/honor.jpg',
+							links:'honor.html'
+						}
+					]
+				}
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style/css/base.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<link rel="stylesheet" href="style/css/news.css" />
+		<script type="text/javascript" src="style/js/vue.min.js" ></script>
+		<script type="text/javascript" src="style/js/base.js" ></script>
+		<script type="text/javascript" src="style/js/footer.js" ></script>
+	</head>
+	<body>
+		<!--手机端菜单-->
+		<div id="news">
+			<menu-bar></menu-bar>
+
+		
+		<!--新闻开始-->
+			<div class="wrap background_color">
+				<div class="banner">
+					<img src="style/images/banner_news.jpg">
+				</div>
+				<div class="news">
+					<ul class="clearfix">
+						<li>
+							<a href=""><img src="style/images/news_nav_4.png">企业新闻</a>
+						</li>
+						<li>
+							<a href=""><img src="style/images/news_nav_4.png">行业资讯</a>
+						</li>
+						<li>
+							<a href=""><img src="style/images/news_nav_4.png">会展信息</a>
+						</li>
+						<li>
+							<a href=""><img src="style/images/news_nav_4.png">文献汇编</a>
+						</li>
+					</ul>
+				</div>
+				<div class="sec">
+					<ul>
+						<li v-for="(item,index) in newsData" :key="index" class="clearfix">
+							<a href="news_details.html">
+								<div class="sec_img">
+									<img :src="item.img">
+								</div>
+								<div class="sec_text">
+									<p>{{item.newsTitle}}</p>
+									<span>{{item.time}}</span>
+									<span class="sec_more">MORE</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				
+				<div class="page">
+					<ul class="clearfix">
+						<li class="disabled">
+							<a href="javascript:;"><span>«</span></a>
+						</li>
+						<li class="active">
+							<a href="javascript:;">1</a>
+						</li>
+						<li>
+							<a href="javascript:;">2</a>
+						</li>
+						<li>
+							<a href="javascript:;">3</a>
+						</li>
+						<li>
+							<a href="javascript:;">···</a>
+						</li>
+						<li>
+							<a href="javascript:;">9</a>
+						</li>
+						<li>
+							<a href="javascript:;"><span>»</span></a>
+						</li>
+					</ul>
+				</div>			
+			</div>
+		<!--新闻结束-->
+		
+		
+		
+			<!--footer开始-->
+			<footer-nav></footer-nav>
+			<!--footer结束-->
+		
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#news',
+			data:{
+				newsData:[
+					{
+						id:1,
+						newsTitle:'校企携手共努力，互惠共赢创未来 ——记伊普诺康与安徽理工大学战略合作签约',
+						img:'style/images/news_wap.png',
+						time:'2018/12/29'
+					},
+					{
+						id:2,
+						newsTitle:'重磅！伊普诺康和润达医疗达成“GPO”战略合作',
+						img:'style/images/news_1.png',
+						time:'2018/12/29'
+					},
+					{
+						id:3,
+						newsTitle:'伊普诺康乔迁誌禧',
+						img:'style/images/company.jpg',
+						time:'2018/12/29'
+					}	
+				]
+			}
+		})
+	</script>
+</html>

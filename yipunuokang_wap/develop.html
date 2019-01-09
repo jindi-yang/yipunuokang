@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style/css/base.css" />
+		<link rel="stylesheet" href="style/plugin/Swiper/css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/plugin/Swiper/js/swiper.min.js" ></script>
+		<script type="text/javascript" src="style/js/vue.min.js" ></script>
+		<script type="text/javascript" src="style/js/base.js" ></script>
+		<script type="text/javascript" src="style/js/footer.js" ></script>
+	</head>
+	<style>
+		.swiper-container {
+		      width: 100%;
+		      height: 200px;
+		   }
+	</style>
+	<body>
+		<div id="develop">
+			<menu-bar></menu-bar>
+			
+			
+		
+		
+		
+			<div class="wrap background_color ">
+				<div class="banner">
+					<img src="style/images/banner_development.jpg">
+				</div>
+				<div class="title">
+					<h2>{{developData.title}}</h2>
+					<span class="tips_words">{{developData.englishName}}</span>
+				</div>
+				<!-- Swiper -->
+				<div class="swiper-container develop" >
+				   	<div class="swiper-wrapper">
+				      	<div class="swiper-slide" v-for="(item,index) in developData.developTime">
+				      		<h2>{{item.time}}</h2>
+				      		<div v-html="item.des" class="dev_text"></div>
+				      	</div> 
+				    </div>
+				    <div class="swiper-pagination"></div>
+				</div>
+				 
+			</div>
+			
+			
+			<!--footer开始-->
+			<footer-nav></footer-nav>
+			<!--footer结束-->
+		
+		</div>
+	</body>
+	<script>
+	    
+	    
+	    new Vue({
+	    	el:"#develop",
+	    	data:{
+	    		developData:{
+	    			id:1,
+					title:'发展历程',
+					englishName:'DEVELOPMENT HISTORY',
+					developTime:[
+						{
+							id:2012,
+							time:'2012',
+							des:'<p>公司成立并取得医疗器械生产许可证</p><p>首批43个产品通过医疗器械注册</p>'
+						},
+						{
+							id:2013,
+							time:'2013',
+							des:'<p>通过安徽省食品药品监督管理局的质量体系考核</p>'
+						},
+						{
+							id:2014,
+							time:'2014',
+							des:'<p>获得“国家高新技术企业”认证</p><p>通过ISO13485质量管理体系认证</p>'
+						},
+						{
+							id:2015,
+							time:'2015',
+							des:'<p>购置联东新厂房同年完成股改。</p>'
+						},
+						{
+							id:2016,
+							time:'2016',
+							des:'<p>2月，新三板挂牌</p><p>8月，与包河区政府签约，建立医疗产业园、用于研发和扩大产能。</p>'
+						},
+						{
+							id:2017,
+							time:'2017',
+							des:'<p>成立四川伊普诺康全资子公司，布局大西南</p>'
+						},
+						{
+							id:2018,
+							time:'2018',
+							des:'<p>筹建南京研发中心，海门原料研发基地成立，深圳仪器研发中心</p>'
+						}
+						
+					]
+	    		}
+	    	},
+	    	mounted:function(){
+	    		
+	    		var swiper = new Swiper('.swiper-container', {
+			        pagination: {
+			            el: '.swiper-pagination',
+			        },
+			        autoplay: {
+				        delay: 2500,
+				       	disableOnInteraction: false,
+				    }
+			    });
+	    	}
+	    })
+  	</script>
+</html>

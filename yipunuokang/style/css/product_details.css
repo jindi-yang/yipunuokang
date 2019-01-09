@@ -1,0 +1,25 @@
+.product-sec{
+	padding: 30px;
+}
+.product-sec .img{
+	float: left;
+	width: 300px;
+}
+.product-sec .txt{
+	float: right;
+	width: 900px;
+	overflow: hidden;
+	letter-spacing: 1px;
+}
+.product-sec h2{
+	line-height: 50px;
+}
+.product-sec .txt h3{
+	line-height: 46px;
+}
+.product-sec .txt p{
+	line-height: 26px;
+	text-indent:2em;
+	color: #666;
+	
+}

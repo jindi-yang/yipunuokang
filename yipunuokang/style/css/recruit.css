@@ -1,0 +1,119 @@
+.top-banner{
+	background-image: url(../images/banner_about.jpg);
+}
+.wrap ul li{
+	width: 238px;
+	height: 220px;
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 62px;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 30px 20px;
+	position: relative;
+}
+.talents ul{
+	width: 1138px;
+	margin: 0 auto;
+}
+.wrap ul li:hover{
+	background: #F2A94B;
+	border: 1px solid #F2A94B;
+}
+.hide{
+	display:none;
+  	vertical-align: middle;
+  	
+}
+.wrap ul li:hover .hide{
+	display: inline-block;
+	color: #fff;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+.wrap ul li:hover .info{
+	display: none;
+}
+.wrap ul li span{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: #ccc;
+	border-radius: 50%;
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+.wrap ul li p{
+	line-height: 24px;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-align: center;
+}
+.left{
+	float: left;
+	width: 350px;
+	height: 400px;
+	text-align: center;
+	position: relative;
+}
+
+.left h3,
+.talents h3{
+	font-size: 24px;
+	line-height: 50px;
+	text-align: left;
+}
+.left p,
+.talents p{
+	line-height: 24px;
+	text-align: left;
+	color: #999;	
+	letter-spacing: 1px;
+}
+.info p{
+	color: #000;
+}
+
+.talents p{
+	margin-bottom: 30px;
+}
+.hide p{
+	color: #fff;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.left .more{
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	display: inline-block;
+	padding-right: 26px;
+	background: url(../images/arrow_right.png) no-repeat right center;
+	background-size: 19px 19px;
+}
+.left .more:hover{
+	color: #0080FF;
+	background: url(../images/arrow_right_hover.png) no-repeat right center;
+	background-size: 19px 19px;
+}
+.left img{
+	width: 160px;
+	height: 160px;
+	margin-top: 30px;
+}
+.right{
+	float: right;
+	width:900px;
+	height: 400px;
+}
+.banner_recruit{
+	background-image: url(../images/banner_hr.jpg);
+}
