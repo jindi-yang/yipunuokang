@@ -23,27 +23,18 @@
 		<!--新闻开始-->
 			<div class="wrap background_color">
 				<div class="banner">
-					<img src="style/images/banner_news.jpg">
+					<img :src="newsInfo.bannerPic">
 				</div>
 				<div class="news">
 					<ul class="clearfix">
-						<li>
-							<a href=""><img src="style/images/news_nav_4.png">企业新闻</a>
-						</li>
-						<li>
-							<a href=""><img src="style/images/news_nav_4.png">行业资讯</a>
-						</li>
-						<li>
-							<a href=""><img src="style/images/news_nav_4.png">会展信息</a>
-						</li>
-						<li>
-							<a href=""><img src="style/images/news_nav_4.png">文献汇编</a>
+						<li v-for="(item,index) in newsInfo.newsCategory" :key="index" @click="changeNew(item.title,index)">
+							<a href="##"><img :src="item.img">{{item.title}}</a>
 						</li>
 					</ul>
 				</div>
 				<div class="sec">
 					<ul>
-						<li v-for="(item,index) in newsData" :key="index" class="clearfix">
+						<li v-for="(item,index) in newsList" :key="index" class="clearfix">
 							<a href="news_details.html">
 								<div class="sec_img">
 									<img :src="item.img">
@@ -72,7 +63,7 @@
 			  		</ul>		
 			    </div>		
 			</div>
-		<!--新闻结束-->
+			<!--新闻结束-->
 		
 		
 		
@@ -88,25 +79,102 @@
 			data:{
 				all:8,
 				cur:1,
+				newsInfo:{
+					bannerPic:'style/images/banner_news.jpg',
+					newsCategory:[
+						{
+							id:1,
+							title:'企业新闻',
+							img:'style/images/news_nav_1.png'
+						},
+						{
+							id:2,
+							title:'行业资讯',
+							img:'style/images/news_nav_2.png'
+						},
+						{
+							id:3,
+							title:'会展信息',
+							img:'style/images/news_nav_3.png'
+						},
+						{
+							id:4,
+							title:'文献汇编',
+							img:'style/images/news_nav_4.png'
+						}			
+					]
+				},
+				newsList:[],
 				newsData:[
 					{
 						id:1,
 						newsTitle:'校企携手共努力，互惠共赢创未来 ——记伊普诺康与安徽理工大学战略合作签约',
 						img:'style/images/news_wap.png',
-						time:'2018/12/29'
+						time:'2018/12/29',
+						click:0,
 					},
 					{
 						id:2,
 						newsTitle:'重磅！伊普诺康和润达医疗达成“GPO”战略合作',
 						img:'style/images/news_1.png',
-						time:'2018/12/29'
+						time:'2018/12/29',
+						click:0,
 					},
 					{
 						id:3,
 						newsTitle:'伊普诺康乔迁誌禧',
 						img:'style/images/company.jpg',
-						time:'2018/12/29'
+						time:'2018/12/29',
+						click:0
 					}	
+				],
+				industryData:[
+					{
+						id:1,
+						newsTitle:'体外诊断产业空间巨大期待政策支持',
+						img:'style/images/common.png',
+						time:'2018/12/29',
+						click:0,
+					},
+					{
+						id:2,
+						newsTitle:'北京市发布药品医疗器械产品注册收费实施细则',
+						img:'style/images/common.png',
+						time:'2018/12/29',
+						click:0,
+					}
+				],
+				conventionData:[
+					{
+						id:1,
+						newsTitle:'伊普诺康参展2017青岛CACLP春季会取得圆满成功',
+						img:'style/images/news_wap_2.jpg',
+						time:'2018/12/29',
+						click:0,
+					},
+					{
+						id:2,
+						newsTitle:'北京市发布药品医疗器械产品注册收费实施细则',
+						img:'style/images/news_1.png',
+						time:'2018/12/29',
+						click:0,
+					}
+				],
+				literatureData:[
+					{
+						id:1,
+						newsTitle:'孕妇血清中的糖化血红蛋白',
+						img:'style/images/common.png',
+						time:'2018/12/29',
+						click:0,
+					},
+					{
+						id:2,
+						newsTitle:'糖化血红蛋白的临床应用',
+						img:'style/images/common.png',
+						time:'2018/12/29',
+						click:0,
+					}
 				]
 			},
 			computed: {
@@ -136,6 +204,21 @@
 		    	}
 		    },
 		    methods: {
+		    	changeNew(e,index){
+		    		console.log(index)
+		    		if(index == 0){
+		    			this.newsList = this.newsData
+		    		}else if(index == 1){
+		    			this.newsList = this.industryData
+		    		}else if(index == 2){
+		    			this.newsList = this.conventionData
+		    		}else if(index == 3){
+		    			this.newsList = this.literatureData
+		    		}else{
+		    			
+		    		}
+		    		
+		    	},
         		btnClick: function(data){//页码点击事件
             		if(data != this.cur){
                 		this.cur = data 
@@ -144,6 +227,9 @@
         		pageClick: function(){
             		//console.log('现在在'+this.cur+'页');
         		}
+    		},
+    		mounted:function(){
+    			this.newsList = this.newsData
     		}
 		})
 	</script>
