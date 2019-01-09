@@ -23,13 +23,13 @@
 		
 			<!--企业荣誉开始-->
 			<div class="wrap background_color honor">
-				<div class="banner"><img src="style/images/banner_honor.jpg"></div>
+				<div class="banner"><img :src="honorData.bannerPic"></div>
 				<div class="title">
-					<h2>企业荣誉</h2>
-					<span class="tips_words">ENTERPRISE HONOR</span>
+					<h2>{{honorData.title}}</h2>
+					<span class="tips_words">{{honorData.englishName}}</span>
 				</div>
 				<ul class="clearfix">
-					<li v-for="(item,index) in honorData" :key="index">
+					<li v-for="(item,index) in honorData.honorList" :key="index">
 						<img :src="item.img">
 						<p>奖项：{{item.awards}}</p>
 						<p>日期：{{item.dates}}</p>
@@ -49,33 +49,38 @@
 		new Vue({
 			el:"#honor",
 			data:{
-				honorData:[
-					{
-						id:1,
-						dates:'2018-10-21',
-						awards:'高新技术企业',
-						img:'style/images/honor_1.jpg',
-					},
-					{
-						id:2,
-						dates:'2018-10-21',
-						awards:'安徽省工程研究中心',
-						img:'style/images/honor_2.jpg',
-					},
-					{
-						id:3,
-						dates:'2018-10-21',
-						awards:'安徽省科技型中小型企业',
-						img:'style/images/honor_3.jpg',
-					},
-					{
-						id:4,
-						dates:'2018-10-21',
-						awards:'安徽省知识产权培育企业',
-						img:'style/images/honor_4.jpg',
-					}
-					
-				]
+				honorData:{
+					title:'企业荣誉',
+					englishName:'ENTERPRISE HONOR',
+					bannerPic:'style/images/banner_honor.jpg',
+					honorList:[
+						{
+							id:1,
+							dates:'2018-10-21',
+							awards:'高新技术企业',
+							img:'style/images/honor_1.jpg',
+						},
+						{
+							id:2,
+							dates:'2018-10-21',
+							awards:'安徽省工程研究中心',
+							img:'style/images/honor_2.jpg',
+						},
+						{
+							id:3,
+							dates:'2018-10-21',
+							awards:'安徽省科技型中小型企业',
+							img:'style/images/honor_3.jpg',
+						},
+						{
+							id:4,
+							dates:'2018-10-21',
+							awards:'安徽省知识产权培育企业',
+							img:'style/images/honor_4.jpg',
+						}
+					]
+				}
+				
 			}
 		})
 	</script>

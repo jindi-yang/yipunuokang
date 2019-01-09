@@ -21,43 +21,19 @@
 			<!--人力资源开始-->
 			<div class="wrap background_color recruit">
 				<div class="banner">
-					<img src="style/images/banner_hr.jpg">
+					<img :src="recruitData.bannerPic">
 				</div>
 				<div class="title">
-					<h2>人力资源</h2>
-					<span class="tips_words">HUMAN RESOURCE</span>
+					<h2>{{recruitData.title}}</h2>
+					<span class="tips_words">{{recruitData.englishName}}</span>
 				</div>
 				<div>
-					<div class="recuit_img"><img src="style/images/talent_concept.png"></div>
-					<div class="recruit_txt">
-						<h3>我们崇尚人生观、职业观、价值观的内在统一</h3>
-						<span>员工把实现企业目标好实现自身价值合二为一，最终达到个人价值与企业价值观的完美融合。</span>
-						<h3>我们崇尚以人为本，共同发展</h3>
-						<span>以精诚的态度倾听员工的声音，充分发挥员工的潜能;</span>
-						<span>企业靠员工发展，员工靠企业立业；</span>
-						<span>我们愿共同投身伊普诺康健康事业并为之奋斗不懈</span>
-						<h3>我们崇尚知识，用我们卓越的文化支持员工的个人进步与学习</h3>
-						<span>注重选才、育才、用才、留才，积极营造利于员工成长、发掘员工潜能的工作环境</span>
-						<h3>我们崇尚品德，选才必以德为先</h3>
-						<span>德才兼备-重用</span>
-						<span>有德无才-少用</span>
-						<span>有才无德-慎用</span>
-						<span>无德无才-不用</span>
-					</div>
+					<div class="recuit_img"><img :src="recruitData.recruitInfo.img"></div>
+					<div class="recruit_txt" v-html="recruitData.recruitInfo.des"></div>
 				</div>
 				<div>
-					<div class="recuit_img"><img src="style/images/salary.png"></div>
-					<div class="recruit_txt">
-						<h3>激励保障</h3>
-						<span>8小时双休、法定假日</span>
-						<span>社会保险、住房公积金</span>
-						<span>提供多元化的培训机会</span>
-						<span>员工旅游</span>
-						<span>丰厚的过节费及实物</span>
-						<span>一年一次健康体检</span>
-						<span>补助：餐费、交通、通讯、房屋、学历、 职称</span>
-						<span>足够挑战的薪酬</span>
-					</div>
+					<div class="recuit_img"><img :src="recruitData.security.img"></div>
+					<div class="recruit_txt" v-html="recruitData.security.des"></div>
 				</div>
 				<div class="last">
 					<h2>人才招聘</h2>
@@ -79,7 +55,21 @@
 	<script>
 		new Vue({
 			el:"#recruit",
-			data:{}
+			data:{
+				recruitData:{
+					title:'人力资源',
+					englishName:'HUMAN RESOURCE',
+					bannerPic:'style/images/banner_hr.jpg',
+					recruitInfo:{
+						img:'style/images/talent_concept.png',
+						des:'<h3>我们崇尚人生观、职业观、价值观的内在统一</h3><span>员工把实现企业目标好实现自身价值合二为一，最终达到个人价值与企业价值观的完美融合。</span><h3>我们崇尚以人为本，共同发展</h3><span>以精诚的态度倾听员工的声音，充分发挥员工的潜能;</span><span>企业靠员工发展，员工靠企业立业；</span><span>我们愿共同投身伊普诺康健康事业并为之奋斗不懈</span><h3>我们崇尚知识，用我们卓越的文化支持员工的个人进步与学习</h3><span>注重选才、育才、用才、留才，积极营造利于员工成长、发掘员工潜能的工作环境</span><h3>我们崇尚品德，选才必以德为先</h3><span>德才兼备-重用</span><span>有德无才-少用</span><span>有才无德-慎用</span><span>无德无才-不用</span>',
+					},
+					security:{
+						img:'style/images/salary.png',
+						des:'<h3>激励保障</h3><span>8小时双休、法定假日</span><span>社会保险、住房公积金</span><span>提供多元化的培训机会</span><span>员工旅游</span><span>丰厚的过节费及实物</span><span>一年一次健康体检</span><span>补助：餐费、交通、通讯、房屋、学历、 职称</span><span>足够挑战的薪酬</span>'
+					}
+				}
+			}
 		})
 	</script>
 </html>

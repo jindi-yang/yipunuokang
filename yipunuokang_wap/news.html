@@ -61,29 +61,16 @@
 				
 				<div class="page">
 					<ul class="clearfix">
-						<li class="disabled">
-							<a href="javascript:;"><span>«</span></a>
-						</li>
-						<li class="active">
-							<a href="javascript:;">1</a>
-						</li>
-						<li>
-							<a href="javascript:;">2</a>
-						</li>
-						<li>
-							<a href="javascript:;">3</a>
-						</li>
-						<li>
-							<a href="javascript:;">···</a>
-						</li>
-						<li>
-							<a href="javascript:;">9</a>
-						</li>
-						<li>
-							<a href="javascript:;"><span>»</span></a>
-						</li>
-					</ul>
-				</div>			
+			        	<li v-if="cur>1"><a v-on:click="cur--,pageClick()"><span>«</span></a></li>
+			        	<li v-if="cur==1"><a class="banclick"><span>«</span></a></li>
+			        	<li v-for="index in indexs"  v-bind:class="{ 'active': cur == index}">
+			            	<a v-on:click="btnClick(index)">{{ index }}</a>
+			       		</li>
+			        	<li v-if="cur!=all"><a v-on:click="cur++,pageClick()"><span>»</span></a></li>
+			        	<li v-if="cur == all"><a class="banclick"><span>»</span></a></li>
+			        	<li><a>共<i>{{all}}</i>页</a></li>
+			  		</ul>		
+			    </div>		
 			</div>
 		<!--新闻结束-->
 		
@@ -99,6 +86,8 @@
 		new Vue({
 			el:'#news',
 			data:{
+				all:8,
+				cur:1,
 				newsData:[
 					{
 						id:1,
@@ -119,7 +108,43 @@
 						time:'2018/12/29'
 					}	
 				]
-			}
+			},
+			computed: {
+		        indexs: function(){
+		          	var left = 1;
+		         	var right = this.all;
+		          	var ar = [];
+		          	if(this.all>= 4){
+		            	if(this.cur > 3 && this.cur < this.all-2){
+		                    left = this.cur - 2
+		                    right = this.cur + 2
+		            	}else{
+		                	if(this.cur<=3){
+		                   		left = 1
+		                    	right = 4
+		                	}else{
+		                    	right = this.all
+		                    	left = this.all -4
+		                	}	
+		            	}
+		         	}
+		        	while (left <= right){
+		            	ar.push(left)
+		            	left ++
+		        	}
+		        	return ar
+		    	}
+		    },
+		    methods: {
+        		btnClick: function(data){//页码点击事件
+            		if(data != this.cur){
+                		this.cur = data 
+            		}
+        		},
+        		pageClick: function(){
+            		//console.log('现在在'+this.cur+'页');
+        		}
+    		}
 		})
 	</script>
 </html>

@@ -20,19 +20,19 @@
 			<!--联系我们开始-->
 			<div class="wrap background_color">
 				<div class="banner">
-					<img src="style/images/banner_contact.jpg">
+					<img :src="contactData.bannerPic">
 				</div>
 				<div class="title">
-					<h2>联系我们</h2>
-					<span class="tips_words">CONTACT US</span>
+					<h2>{{contactData.title}}</h2>
+					<span class="tips_words">{{contactData.englishName}}</span>
 				</div>
 				<div class="contact">
-					<div>地址：安徽省合肥市包河经济开发区繁华大道吉林路东南角联东U谷18号楼</div>
+					<div>地址：{{contactData.contactInfo.address}}</div>
 					<div>
-						<p>商务专线：0551-63428055/63428255</p>
-						<p>总机：0551-65358887</p>
+						<p>商务专线：{{contactData.contactInfo.switchboard}}</p>
+						<p>总机：{{contactData.contactInfo.tel}}</p>
 					</div>
-					<div>传真：0551-63426155</div>
+					<div>传真：{{contactData.contactInfo.fax}}</div>
 				</div>
 				<div class="form">
 					<h5>给我留言</h5>
@@ -79,7 +79,17 @@
 		new Vue({
 			el:"#contact",
 			data:{
-				
+				contactData:{
+					title:'联系我们',
+					englishName:'CONTACT US',
+					bannerPic:'style/images/banner_contact.jpg',
+					contactInfo:{
+						address:'安徽省合肥市包河经济开发区繁华大道吉林路东南角联东U谷18号楼',
+						switchboard:'0551-63428055/63428255',
+						tel:'0551-65358887',
+						fax:'0551-63426155'
+					}
+				}
 			}
 		})
 	</script>
