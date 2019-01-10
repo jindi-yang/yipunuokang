@@ -300,9 +300,10 @@
 }
 
 .company_info_txt p{
-	line-height: 24px;
+	line-height: 25px;
 	letter-spacing: 1px;
 	color: #666;
+	text-indent: 2em;
 }
 .company_info_txt .see_more{
 	text-align: center;
