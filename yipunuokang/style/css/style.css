@@ -97,7 +97,7 @@
 }
 
 .title h3 {
-	font-size: 16px;
+	font-size: 18px;
 	color: #999;
 	letter-spacing: 3px;
 	font-weight: normal;
@@ -1261,7 +1261,32 @@
 
 /*人才招聘*/
 
-
+.hire li{
+	float: left;
+	width: 68px;
+	height: 68px;
+	line-height: 6870px;
+	text-align: center;
+	border: 1px solid #00A0E8;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 90px;
+}
+.hire li a{
+	text-align: center;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: #00A0E8;
+	line-height: 60px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+	color: #fff;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
 .talent .banner{
 	background: url(../images/ln_bg1.jpg) no-repeat center;
     background-size: cover;
