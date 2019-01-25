@@ -96,7 +96,16 @@
 
 		<!--内容开始-->
 		<div id="company">
-			<div class="banner banner-small"></div>
+			<!--<div class="banner banner-small"></div>-->
+			<!--轮播banner-->
+				<div class="swiper-container swiper-banner banner-small">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="style/images/company_banner.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
 			<div class="fix-nav">
 				<ul class="clearfix top-menu max-width">
 					<li class="active"><a href="#about">关于我们</a></li>
@@ -120,7 +129,7 @@
 							<h3>公司介绍<i></i></h3>
 							<p>【安徽伊普诺康生物技术股份有限公司】是一家集研发、生产、销售、服务为一体的国家级高新技术企业，自创立以来，一直致力于做精做强，不断完善公司的产业布局。公司现有注册生化试剂产品82项，涵盖肝功能、肾功能、心肌标志物、血脂、糖代谢、特种蛋白、肿瘤等品类。其中19项特色产品处于行业领先地位。其中，小而密低密度脂蛋白胆固醇（sdLDL-C）、补体C1q、血清淀粉样蛋白A（SAA）、甘胆酸（CG）、IV型胶原蛋白（COL IV）、特异性生长因子（TSGF）、心型脂肪酸结合蛋白（H-FABP）等特色产品能有效满足临床对新检验项目的需求，销量保持强劲增长势头</p>
 							<div class="more">
-								<a href="about.html">MORE +</a>
+								<a href="about.html">查看更多</a>
 							</div>
 						</div>
 						<div class="right">
@@ -149,7 +158,7 @@
 									<h1>2012年</h1>
 									<p>公司成立并取得医疗器械生产许可证</p>
 									<p>首批43个产品通过医疗器械注册</p>
-									<a href="development.html" class="more">MORE +</a>
+									<a href="development.html" class="more">查看更多</a>
 								</div>
 							</li>
 							<li>
@@ -157,7 +166,7 @@
 								<div class="develop-text">
 									<h1>2013年</h1>
 									<p> 通过安徽省食品药品监督管理局的质量体系考核</p>
-									<a href="##" class="more">MORE +</a>
+									<a href="##" class="more">查看更多</a>
 								</div>
 							</li>
 							<li>
@@ -166,7 +175,7 @@
 									<h1>2014年</h1>
 									<p>获得“国家高新技术企业”认证</p>
 									<p>通过ISO13485质量管理体系认证</p>
-									<a href="##" class="more">MORE +</a>
+									<a href="##" class="more">查看更多</a>
 								</div>
 							</li>
 							<li>
@@ -174,7 +183,7 @@
 								<div class="develop-text">
 									<h1>2015年</h1>
 									<p>购置联东新厂房同年完成股改。</p>
-									<a href="##" class="more">MORE +</a>
+									<a href="##" class="more">查看更多</a>
 								</div>
 							</li>
 							<li>
@@ -183,7 +192,7 @@
 									<h1>2016年</h1>
 									<p>2月，新三板挂牌</p>
 									<p>8月，与包河区政府签约，建立医疗产业园、用于研发和扩大产能。</p>
-									<a href="##" class="more">MORE +</a>
+									<a href="##" class="more">查看更多</a>
 								</div>
 							</li>
 							<li>
@@ -191,7 +200,7 @@
 								<div class="develop-text">
 									<h1>2017年</h1>
 									<p>成立四川伊普诺康全资子公司，布局大西南</p>
-									<a href="##" class="more">MORE +</a>
+									<a href="##" class="more">查看更多</a>
 								</div>
 							</li>
 							<li>
@@ -199,7 +208,7 @@
 								<div class="develop-text">
 									<h1>2018年</h1>
 									<p>筹建南京研发中心，海门原料研发基地成立，深圳仪器研发中心</p>
-									<a href="##" class="more">MORE +</a>
+									<a href="##" class="more">查看更多</a>
 								</div>
 							</li>
 						</ul>
@@ -259,11 +268,11 @@
 								<p>和谐 进取 责任 奉献</p>
 							</div>
 							<div class="more">
-								<a href="culture.html">MORE +</a>
+								<a href="culture.html">查看更多</a>
 							</div>
 						</div>
 						<div class="right">
-							<img src="style/images/culture_bg.jpg">
+							<img src="style/images/culture_bg.png">
 						</div>
 					</div>
 				</div>
@@ -316,7 +325,18 @@
 		
 	</body>
 	<script>
-		
+		//首页轮播
+		var swiper = new Swiper('.swiper-banner', {
+			autoplay: false,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		});
 		
 		
 		$(function() {

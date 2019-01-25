@@ -97,24 +97,35 @@
 		<div id="product">
 			<!--试剂开始-->
 			<div class="background-color reagent">
-				<div class="banner banner-small"></div>
+				<!--<div class="banner banner-small"></div>-->
+				
+				<!--轮播banner-->
+				<div class="swiper-container swiper-banner banner-small">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
 				<div class="max-width">
 					<div class="fix-nav">
 						<ul class="clearfix top-menu max-width width33">
 							<li class="active">
-								<a href="#regent">诊断试剂</a>
+								<a href="#regent">生化试剂</a>
 							</li>
 							<li>
-								<a href="#project">特色项目</a>
+								<a href="#project">生化特色项目</a>
 							</li>
 							<li>
-								<a href="#instrument">诊断仪器</a>
+								<a href="#instrument">特定蛋白分析仪</a>
 							</li>
 						</ul>
 					</div>
 					<div class="nav-part">
 						<div class="title">
-							<h2>诊断试剂</h2>
+							<h2>生化试剂</h2>
 							<h3>REAGENT<i class="left-line"></i><i class="right-line"></i></h3>
 						</div>
 						<div class="list" id="regent">
@@ -212,45 +223,51 @@
 			<!--特色项目-->
 			<div class="max-width nav-part special-project bottom-distance" id="project">
 				<div class="title">
-					<h2>特色项目</h2>
+					<h2>生化特色项目</h2>
 					<h3>SPECIAL PROJECT<i class="left-line"></i><i class="right-line"></i></h3>
 				</div>
-				<div class="swiper-container ">
+				<div class="swiper-container sepecial">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<a href="product_details.html">
 								<div><img src="style/images/special_icon_1.jpg"></div>
-								<p>糖化白蛋白测定试剂盒</p>
+								<p>产品名称：甘胆酸测定试剂盒</p>
+								<p>英文缩写：CG</p>								
 							</a>
 						</div>
 						<div class="swiper-slide">
 							<a href="product_details.html">
 								<div><img src="style/images/special_icon_1.jpg"></div>
-								<p>糖化白蛋白测定试剂盒</p>
+								<p>产品名称：甘胆酸测定试剂盒</p>
+								<p>英文缩写：CG</p>	
 							</a>
 						</div>
 						<div class="swiper-slide">
 							<a href="product_details.html">
 								<div><img src="style/images/special_icon_1.jpg"></div>
-								<p>糖化白蛋白测定试剂盒</p>
+								<p>产品名称：甘胆酸测定试剂盒</p>
+								<p>英文缩写：CG</p>	
 							</a>
 						</div>
 						<div class="swiper-slide">
 							<a href="product_details.html">
 								<div><img src="style/images/special_icon_1.jpg"></div>
-								<p>糖化白蛋白测定试剂盒</p>
+								<p>产品名称：甘胆酸测定试剂盒</p>
+								<p>英文缩写：CG</p>	
 							</a>
 						</div>
 						<div class="swiper-slide">
 							<a href="product_details.html">
 								<div><img src="style/images/special_icon_1.jpg"></div>
-								<p>糖化白蛋白测定试剂盒</p>
+								<p>产品名称：甘胆酸测定试剂盒</p>
+								<p>英文缩写：CG</p>	
 							</a>
 						</div>
 						<div class="swiper-slide">
 							<a href="product_details.html">
 								<div><img src="style/images/special_icon_1.jpg"></div>
-								<p>糖化白蛋白测定试剂盒</p>
+								<p>产品名称：甘胆酸测定试剂盒</p>
+								<p>英文缩写：CG</p>	
 							</a>
 						</div>
 					</div>
@@ -264,7 +281,7 @@
 			<div class="background-color bottom-distance apparatus nav-part" id="instrument">
 				<div class="max-width">
 					<div class="title">
-						<h2>诊断仪器</h2>
+						<h2>特定蛋白仪</h2>
 						<h3>APPARATUS<i class="left-line"></i><i class="right-line"></i></h3>
 					</div>
 					<div class="clearfix">
@@ -272,11 +289,13 @@
 							<img src="style/images/protein.png">
 							<a href="" class="pic">
 								<p>特定蛋白仪：梦T200plus</p>
+
 							</a>
 						</div>
 						<div class="see-more">
-							<p>特定蛋白仪：梦T200plus</p>
-							<a href="#">MORE + </a>
+							<h3>特定蛋白仪：梦T200plus</h3>
+							<p>特定蛋白仪的文字描述特定蛋白仪的文字描述特定蛋白仪的文字描述</p>
+							<a href="#">查看详情</a>
 						</div>
 					</div>
 
@@ -301,8 +320,6 @@
 		<!--footer-end-->
 	</body>
 	<script>
-		$(".headerPage").load("header.html");
-
 		$(".footerPage").load('footer.html')
 		$(".box").hover(function() {
 			console.log(1)
@@ -314,13 +331,27 @@
 				bottom: "-100%"
 			}, 400);
 		})
-		var swiper = new Swiper('.swiper-container', {
+		
+		//首页轮播
+		var swiper = new Swiper('.swiper-banner', {
+			autoplay: false,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		});
+		
+		//特色项目
+		var swiper = new Swiper('.sepecial', {
 			slidesPerView: 3,
 			spaceBetween: 30,
 			slidesPerGroup: 3,
 			loop: true,
 			loopFillGroupWithBlank: true,
-
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',

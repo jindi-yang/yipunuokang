@@ -88,16 +88,23 @@
 					</form>
 				</div>
 			</div>
-
 		</div>
 
 		<!--头部结束-->
-
+		
 		<!--content开始-->
-
 		<div id="home">
-			<div class="banner"></div>
+			<!--轮播banner-->
+			<div class="swiper-container swiper-banner banner">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
 
+			<!--产品推荐-->
 			<div class="max-width bottom-distance">
 				<div class="title">
 					<h2>产品推荐</h2>
@@ -108,21 +115,9 @@
 						<div class="swiper-slide">
 							<a href="product_details.html">
 								<div class="relative">
-									<div class="product-box"></div>
-									<div class="hover">查看详情</div>
-								</div>
-								<div class="product-txt">
-									<h3>总蛋白测定试剂盒</h3>
-									<p>总蛋白,英文名称：TotalProtein(简称TP);</p>
-								</div>
-
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="product_details.html">
-								<div class="relative">
-									<div class="product-box"></div>
-									<div class="hover">查看详情</div>
+									<div class="product-box">
+										<img src="style/images/APOB.png">
+									</div>
 								</div>
 								<div class="product-txt">
 									<h3>总蛋白测定试剂盒</h3>
@@ -133,47 +128,51 @@
 						<div class="swiper-slide">
 							<a href="product_details.html">
 								<div class="relative">
-									<div class="product-box"></div>
-									<div class="hover">查看详情</div>
+									<div class="product-box"><img src="style/images/APOB.png"></div>
 								</div>
 								<div class="product-txt">
 									<h3>总蛋白测定试剂盒</h3>
 									<p>总蛋白,英文名称：TotalProtein(简称TP);</p>
 								</div>
-
 							</a>
 						</div>
 						<div class="swiper-slide">
-							<a href="##">
+							<a href="product_details.html">
 								<div class="relative">
-									<div class="product-box"></div>
-									<div class="hover">查看详情</div>
+									<div class="product-box"><img src="style/images/APOB.png"></div>
 								</div>
 								<div class="product-txt">
 									<h3>总蛋白测定试剂盒</h3>
 									<p>总蛋白,英文名称：TotalProtein(简称TP);</p>
 								</div>
-
 							</a>
 						</div>
 						<div class="swiper-slide">
-							<a href="##">
+							<a href="product_details.html">
 								<div class="relative">
-									<div class="product-box"></div>
-									<div class="hover">查看详情</div>
+									<div class="product-box"><img src="style/images/APOB.png"></div>
 								</div>
 								<div class="product-txt">
 									<h3>总蛋白测定试剂盒</h3>
 									<p>总蛋白,英文名称：TotalProtein(简称TP);</p>
 								</div>
-
 							</a>
 						</div>
 						<div class="swiper-slide">
-							<a href="##">
+							<a href="product_details.html">
 								<div class="relative">
-									<div class="product-box"></div>
-									<div class="hover">查看详情</div>
+									<div class="product-box"><img src="style/images/APOB.png"></div>
+								</div>
+								<div class="product-txt">
+									<h3>总蛋白测定试剂盒</h3>
+									<p>总蛋白,英文名称：TotalProtein(简称TP);</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="product_details.html">
+								<div class="relative">
+									<div class="product-box"><img src="style/images/APOB.png"></div>
 								</div>
 								<div class="product-txt">
 									<h3>总蛋白测定试剂盒</h3>
@@ -183,7 +182,10 @@
 						</div>
 					</div>
 					<!-- Add Pagination -->
-					<div class="swiper-pagination"></div>
+					<!--<div class="swiper-pagination"></div>-->
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 				</div>
 			</div>
 
@@ -199,7 +201,7 @@
 							<h3>公司介绍<i></i></h3>
 							<p>【安徽伊普诺康生物技术股份有限公司】是一家集研发、生产、销售、服务为一体的国家级高新技术企业，自创立以来，一直致力于做精做强，不断完善公司的产业布局。公司现有注册生化试剂产品82项，涵盖肝功能、肾功能、心肌标志物、血脂、糖代谢、特种蛋白、肿瘤等品类。其中19项特色产品处于行业领先地位。其中，小而密低密度脂蛋白胆固醇（sdLDL-C）、补体C1q、血清淀粉样蛋白A（SAA）、甘胆酸（CG）、IV型胶原蛋白（COL IV）、特异性生长因子（TSGF）、心型脂肪酸结合蛋白（H-FABP）等特色产品能有效满足临床对新检验项目的需求，销量保持强劲增长势头</p>
 							<div class="more">
-								<a href="company.html">MORE +</a>
+								<a href="company.html">查看更多</a>
 							</div>
 						</div>
 						<div class="right">
@@ -217,15 +219,6 @@
 				</div>
 				<div class="clearfix">
 					<div class="left hover-pic ">
-						<a href="news_details.html">
-							<img src="style/images/news_3.png">
-							<div class="mask ">
-								<h3>重磅！伊普诺康和润达医疗达成“GPO”战略合作</h3>
-								<p class="ellipsis">近日，润达医疗在杭州西溪喜来登大酒店召开“GPO战略合作”会议。应润达的邀请，伊普诺康董事长蔡晓辉先生携公司主管销售副总参加了本次大会，并成功qian</p>
-							</div>
-						</a>
-					</div>
-					<div class="right">
 						<ul class="news-title clearfix">
 							<li class="active">企业新闻</li>
 							<li>行业资讯</li>
@@ -278,14 +271,22 @@
 											<i>2018-06-17</i>
 										</a>
 									</li>
-
 								</ul>
 							</div>
 						</div>
-
 						<div class="more">
-							<a href="news.html">MORE +</a>
+							<a href="news.html">查看更多</a>
 						</div>
+					</div>
+					<div class="right news-hover">
+						<a href="news_details.html">
+							<div class="pic"><img src="style/images/news_3.png"></div>
+
+							<div class="mask">
+								<h3>重磅！伊普诺康和润达医疗达成“GPO”战略合作</h3>
+								<p class="ellipsis">近日，润达医疗在杭州西溪喜来登大酒店召开“GPO战略合作”会议。应润达的邀请，伊普诺康董事长蔡晓辉先生携公司主管销售副总参加了本次大会，并成功...</p>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -298,21 +299,48 @@
 
 	</body>
 	<script>
-		$(".headerPage").load("header.html");
 		$(".footerPage").load('footer.html')
 
-		var swiper = new Swiper('.swiper-container-project', {
-			slidesPerView: 3,
-			spaceBetween: 70,
+		var swiper = new Swiper('.swiper-banner', {
+			autoplay: false,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			}
 		});
 
+		var swiper = new Swiper('.swiper-container-project', {
+			slidesPerView: 3,
+			spaceBetween: 70,
+			autoplay: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
 		$(".news-title li").click(function() {
 			$(this).addClass('active').siblings().removeClass('active')
 			$('.list-tab>div:eq(' + $(this).index() + ')').show().siblings().hide();
+		})
+
+		//scroll滚动
+		$(window).scroll(function() {
+			var topScroll = $(window).scrollTop()
+
+			if(topScroll > 100) {
+				$('#header').addClass('header-fixed');
+			} else {
+				$('#header').removeClass('header-fixed');
+			}
 		})
 	</script>
 

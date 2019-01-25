@@ -5,7 +5,9 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/plugin/swiper/css/swiper.min.css" />
 		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/plugin/swiper/js/swiper.min.js"></script>
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
 		<script type="text/javascript" src="style/js/base.js"></script>
 		<script type="text/javascript" src="style/js/vue.min.js"></script>
@@ -94,26 +96,36 @@
 
 		<!--内容开始-->
 		<div id="company" class="talent">
-			<div class="banner banner-small"></div>
+			<!--<div class="banner banner-small"></div>-->
+			<!--轮播banner-->
+			<div class="swiper-container swiper-banner banner-small">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="style/images/ln_bg1.jpg"></div>
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
 			<div class="fix-nav">
-				<ul class="clearfix top-menu max-width">
-					<li class="active">
+				<ul class="clearfix top-menu max-width width33">
+					<!--<li class="active">
 						<a href="#talent">人才理念</a>
+					</li>-->
+					<li>
+						<a href="#recruitment">人才招聘</a>
 					</li>
 					<li>
 						<a href="#welfare">薪酬福利</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="#career">职业发展</a>
-					</li>
-					<li>
-						<a href="#recruitment">人才招聘</a>
-					</li>
+					</li>-->
+
 				</ul>
 			</div>
 
 			<!--人才理念-->
-			<div class="background-color nav-part" id="talent">
+			<!--<div class="background-color nav-part" id="talent">
 				<div class="max-width bottom-distance">
 					<div class="title">
 						<h2>人才理念</h2>
@@ -135,32 +147,57 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<!--人才理念结束-->
-			
-			<!--薪酬福利-->
-			<div class="nav-part max-width bottom-distance" id="welfare">
-				<div class="title">
-					<h2>薪酬福利</h2>
-					<h3>COMPENSATION BENEFITS <i class="left-line"></i><i class="right-line"></i></h3>
-				</div>
-				<div class="welfare">
-					<ul class="clearfix">
-						<li v-for="(item,index) in list" :key="index">
-							<div class="img">
-								<img :src="item.img">
-							</div>
-							<p>{{item.name}}</p>
-						</li>
+			<!--人才招聘-->
+			<div class="nav-part" id="recruitment">
 
-					</ul>
+				<div class="max-width bottom-distance">
+					<div class="title">
+						<h2>人才招聘</h2>
+						<h3>TALENT RECRUITMENT<i class="left-line"></i><i class="right-line"></i></h3>
+					</div>
+
+					<div class="clearfix about-box culture">
+						<div class="left">
+							<h3>人才招聘<i></i></h3>
+							<div class="hire">
+								<p>伊普诺康重视从人才成长的早期入手，通过一系列创新的思维和行动，挖掘、开发、培养高潜质的人才。</p>
+								
+							</div>
+							<div class="more">
+								<a href="recruitment.html">查看更多</a>
+							</div>
+						</div>
+						<div class="right">
+							<img src="style/images/talent_4.jpg">
+						</div>
+					</div>
 				</div>
 			</div>
-			
-			
+			<!--人才招聘结束-->
+			<!--薪酬福利-->
+			<div class="background-color nav-part bottom-distance" id="welfare">
+				<div class="max-width">
+					<div class="title">
+						<h2>薪酬福利</h2>
+						<h3>COMPENSATION BENEFITS <i class="left-line"></i><i class="right-line"></i></h3>
+					</div>
+					<div class="welfare">
+						<ul class="clearfix">
+							<li v-for="(item,index) in list" :key="index">
+								<div class="img">
+									<img :src="item.img">
+								</div>
+								<p>{{item.name}}</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
 			<!--职业发展-->
-			<div class="nav-part background-color" id="career">
+			<!--<div class="nav-part background-color" id="career">
 
 				<div class="max-width bottom-distance">
 					<div class="title">
@@ -181,35 +218,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<!--职业发展结束-->
-
-			<!--人才招聘-->
-			<div class="nav-part" id="recruitment">
-
-				<div class="max-width bottom-distance">
-					<div class="title">
-						<h2>人才招聘</h2>
-						<h3>TALENT RECRUITMENT<i class="left-line"></i><i class="right-line"></i></h3>
-					</div>
-
-					<div class="clearfix about-box culture">
-						<div class="left">
-							<h3>人才招聘<i></i></h3>
-							<div>
-								伊普诺康重视从人才成长的早期入手，通过一系列创新的思维和行动，挖掘、开发、培养高潜质的人才。
-							</div>
-							<div class="more">
-								<a href="recruitment.html">MORE +</a>
-							</div>
-						</div>
-						<div class="right">
-							<img src="style/images/talent_4.jpg">
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--人才招聘结束-->
 
 		</div>
 
@@ -223,8 +233,20 @@
 	<script>
 		$(function() {
 
-			$(".headerPage").load("header.html")
 			$(".footerPage").load('footer.html')
+
+			//banner轮播
+			var swiper = new Swiper('.swiper-banner', {
+				autoplay: false,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				}
+			});
 		});
 		new Vue({
 			el: '#company',

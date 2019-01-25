@@ -5,9 +5,12 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/plugin/swiper/css/swiper.min.css" />
 		<link rel="stylesheet" href="style/css/style.css" />
+		
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
 		<script type="text/javascript" src="style/js/base.js"></script>
+		<script type="text/javascript" src="style/plugin/swiper/js/swiper.min.js" ></script>
 	</head>
 
 	<body>
@@ -92,8 +95,18 @@
 
 		<!--内容开始-->
 		<div id="news">
-			<div class="banner banner-small"></div>
-
+			<!--<div class="banner banner-small"></div>-->
+			<!--轮播banner-->
+				<div class="swiper-container swiper-banner banner-small">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				
+				
 			<div class="max-width">
 				<div class="fix-nav">
 					<ul class="clearfix top-menu max-width">
@@ -399,7 +412,19 @@
 
 	</body>
 	<script>
-		$(".headerPage").load("header.html");
+		//banner轮播
+		var swiper = new Swiper('.swiper-banner', {
+			autoplay: false,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		});
+		
 		$(".footerPage").load('footer.html');
 		$(".top-menu li").click(function() {
 			$(this).addClass('active').siblings().removeClass('active')

@@ -6,7 +6,9 @@
 		<title></title>
 		<link rel="stylesheet" href="style/css/common.css" />
 		<link rel="stylesheet" href="style/css/style.css" />
+		<link rel="stylesheet" href="style/plugin/swiper/css/swiper.min.css" />
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="style/plugin/swiper/js/swiper.min.js" ></script>
 
 	</head>
 
@@ -91,7 +93,18 @@
 		<!--头部结束-->
 
 		<div class="background-color bottom-distance" id="news-details">
-			<div class="banner banner-small"></div>
+			<!--<div class="banner banner-small"></div>-->
+			
+			<!--轮播banner-->
+				<div class="swiper-container swiper-banner banner-small">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			
 			<div class="max-width">
 				<div class="wrap">
 					<h2>重磅！伊普诺康和润达医疗达成“GPO”战略合作</h2>
@@ -126,7 +139,20 @@
 		<!--footer-end-->
 	</body>
 	<script>
-		$(".headerPage").load("header.html");
+		
+		//banner轮播
+		var swiper = new Swiper('.swiper-banner', {
+			autoplay: false,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		});
+		
 		$(".footerPage").load('footer.html')
 	</script>
 

@@ -5,9 +5,12 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/plugin/swiper/css/swiper.min.css" />
 		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/plugin/swiper/js/swiper.min.js"></script>
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
 		<script type="text/javascript" src="style/js/base.js"></script>
+
 	</head>
 
 	<body>
@@ -92,7 +95,17 @@
 
 		<!--content-->
 		<div class="background-color" id="product-details">
-			<div class="banner banner-small"></div>
+			<!--<div class="banner banner-small"></div>-->
+			<!--轮播banner-->
+			<div class="swiper-container swiper-banner banner-small">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			
 			<div class="max-width bottom-distance">
 				<div class="title">
 					<h2>产品详情</h2>
@@ -111,29 +124,43 @@
 						<p><b>临床意义：</b></p>
 						<div class="clinic">
 							<h4><i></i>1.Lp-PLA2是评价斑块稳定性的优秀指标</h4>
-							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此
-							与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。</p>
+							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此 与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。
+							</p>
 							<h4><i></i>2.Lp-PLA2比hs-CRP、LDL更具血管炎症特异性</h4>
-							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此
-							与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。</p>
+							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此 与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。
+							</p>
 							<h4><i></i>3.Lp-PLA2是心血管事件的独立预测因子</h4>
-							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此
-							与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。</p>
+							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此 与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<!--content-end-->
-		
+
 		<!--footer-->
 		<div class="footerPage"></div>
 		<!--footer-end-->
 	</body>
 	<script>
-		$(".headerPage").load("header.html");
-		$(".footerPage").load('footer.html')
+		$(function() {
+
+			$(".footerPage").load('footer.html');
+			//banner轮播
+			var swiper = new Swiper('.swiper-banner', {
+				autoplay: false,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				}
+			});
+		})
 	</script>
 
 </html>

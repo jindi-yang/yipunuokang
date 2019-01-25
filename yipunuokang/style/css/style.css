@@ -1,14 +1,29 @@
-.banner {
+/*.banner {
 	background: url(../images/banner_home_1.jpg) no-repeat center;
 	background-size: cover;
-}
+}*/
+
 
 .background-color {
 	background: #fff;
 }
 
-
-
+.swiper-banner{
+	width: 100%;
+	position: relative;
+	height: 500px;
+}
+.swiper-banner .swiper-pagination-bullet{
+	width: 36px;
+	height: 8px;
+	border-radius: 0px;
+	background: #fff;
+	opacity: .4;
+}
+.swiper-banner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: #007aff
+}
 .swiper-container-project {
 	height: 420px;
 	position: relative;
@@ -21,14 +36,32 @@
 	height: 360px;
 	box-sizing: border-box;
 }
-
+.swiper-container-project .swiper-button-next,
+.swiper-button-prev{
+	margin-top: -50px;
+}
 .relative {
 	width: 180px;
 	position: relative;
 	margin: 0 auto;
 }
 
-.product-box {
+.product-box{
+	width: 180px;
+	height: 180px;
+	transition:  all .3s ease-in-out;
+}
+.swiper-container-project img{
+	transition:  all .3s ease-in-out;
+}
+.swiper-container-project .swiper-slide:hover img{
+	transform: scale(1.1);
+}
+.swiper-container-project .swiper-slide:hover h3,
+.swiper-container-project .swiper-slide:hover p{
+	color: #00A0E8;
+}
+/*.product-box {
 	width: 180px;
 	height: 180px;
 	box-sizing: border-box;
@@ -36,7 +69,7 @@
 	background: #DDEDFC url(../images/product_1.png) no-repeat center center;
 	background-size: contain;
 	margin: 0 auto;
-}
+}*/
 
 .title {
 	text-align: center;
@@ -199,11 +232,27 @@
 	display: table;
 	content: "";
 }
-
+.news-list li h3{
+	margin-bottom: 0px;
+}
 .news-list li a:hover {
 	color: #00A0E8;
 }
-
+.news-hover a{
+	display: block;
+}
+.news-hover .pic{
+	width: 500px;
+	height: 360px;
+	overflow: hidden;
+	
+}
+.news-hover .pic img{
+	transition: all .3s ease-in-out;
+}
+.news-hover:hover img{
+	transform: scale(1.1);
+}
 .news-list li h3 {
 	font-size: 14px;
 	font-weight: normal;
@@ -225,8 +274,12 @@
 	color: #fff;
 	padding: 10px 20px;
 	box-sizing: border-box;
+	display: none;
+	transition: all .3s ease-in-out;
 }
-
+.news-hover :hover .mask{
+	display: block;
+}
 .mask h3 {
 	font-size: 14px;
 	margin-bottom: 0px;
@@ -579,7 +632,8 @@
 
 #contact .contact-right {
 	width: 518px;
-	box-sizing: border-box;
+	width: 522px;
+	/*box-sizing: border-box;*/
 }
 
 #contact .text label {
@@ -589,17 +643,18 @@
 }
 
 #contact input {
-	width: 200px;
+	width: 180px;
 	border: 1px solid #c2c2c2;
 	background: #eee;
 	line-height: 36px;
+	height: 36px;
 	margin-right: 20px;
 	padding: 0 10px;
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 	margin-bottom: 30px;
 }
 
-#contact input[type=email] {
+#contact input.email {
 	margin-right: 0px;
 }
 
@@ -983,14 +1038,15 @@
 	margin-right: 0px;
 }
 #product .list div{
-	width: 100px;
-	height: 100px;
+	width: 70px;
+	height: 70px;
 	background: #8F8F8F;
-	line-height: 100px;
+	line-height: 70px;
 	text-align: center;
 	border-radius: 50%;
 	float: left;
-	margin-right: 10px;
+	margin-right: 20px;
+	
 }
 
 #product .list li:hover a{
@@ -999,12 +1055,19 @@
 #product .list li:hover div{
 	background: #00A0E8;
 }
-
-#product .list img{
-	width: 56px;
-	height: 56px;
+#product .list li:hover span{
+	color: #00A0E8;
 }
 
+#product .list img{
+	width: 42px;
+	height: 42px;
+	transition: all .3s ease-in-out;
+}
+
+#product .list li:hover img{
+	transform: scale(1.1);
+}
 #product .list span{
 	display: block;
 }
@@ -1020,8 +1083,9 @@
 }
 
 .special-project p{
-	text-align: center;
-	padding: 20px 0;
+	/*text-align: center;*/
+	/*padding: 20px 0;*/
+	line-height: 26px;
 	font-size: 16px;
 }
 .special-project .swiper-slide:hover p{
@@ -1043,6 +1107,19 @@
 	position: relative;
 }
 
+#product .special-project .swiper-slide div{
+	width: 360px;
+	height: 300px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.special-project .swiper-slide div img{
+	transition: all .3s ease-in-out;
+}
+.special-project .swiper-slide:hover img{
+	transform: scale(1.1);
+}
 #product .box{
 	float: left;
 	width: 360px;
@@ -1078,9 +1155,13 @@
 	float: left;
 	margin-left: 70px;
 }
+#product .see-more h3{
+	margin-bottom: 20px;
+}
 #product .see-more p{
-	font-size: 16px;
+	font-size: 14px;
 	margin-bottom: 10px;
+	color: #999;
 }
 #product .see-more a{
 	display: inline-block;
@@ -1156,6 +1237,7 @@
 
 /*人才招聘*/
 
+
 .talent .banner{
 	background: url(../images/ln_bg1.jpg) no-repeat center;
     background-size: cover;
@@ -1169,7 +1251,7 @@
 	float: left;
 	width: 260px;
 	height: 180px;
-	background: #fff;
+	background: #f2f2f2;
 	text-align: center;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -1273,4 +1355,7 @@
 	margin-bottom: 10px;
 	font-size: 14px;
 	padding-left: 30px;
+}
+.banner-small{
+	height: 360px;
 }

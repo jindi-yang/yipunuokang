@@ -94,7 +94,17 @@
 
 		<!--内容开始-->
 		<div id="honour" class="background-color bottom-distance">
-			<div class="banner banner-small"></div>
+			<!--<div class="banner banner-small"></div>-->
+			<!--轮播banner-->
+				<div class="swiper-container swiper-banner banner-small">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			
 			<div class="title">
 				<h2>企业荣誉</h2>
 				<h3>HONOUR<i class="left-line"></i><i class="right-line"></i></h3>
@@ -177,8 +187,23 @@
 		
 	</body>
 	<script>
-		$(".headerPage").load("header.html");
+		
 		$(".footerPage").load('footer.html')
+		
+		//banner轮播
+		var swiper = new Swiper('.swiper-banner', {
+			autoplay: false,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		});
+		
+		
 		var viewSwiper = new Swiper('.view .swiper-container', {
 			on: {
 				slideChangeTransitionStart: function() {

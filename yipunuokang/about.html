@@ -91,7 +91,19 @@
 	
 		<!--content-->
 		<div id="about" class="background-color bottom-distance">
-			<div class="banner banner-small"></div>
+			<!--<div class="banner banner-small"></div>-->
+			
+			<!--轮播banner-->
+			<div class="swiper-container swiper-banner banner-small">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+				
+				
 			<div class="title">
 				<h2>关于我们</h2>
 				<h3>ABOUT US<i class="left-line"></i><i class="right-line"></i></h3>
@@ -122,9 +134,20 @@
 		<!--footer--end-->
 	</body>
 	<script>
-		$(".headerPage").load("header.html");
-
 		$(".footerPage").load('footer.html')
+		
+		//首页轮播
+		var swiper = new Swiper('.swiper-banner', {
+			autoplay: false,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		});
 	</script>
 
 </html>
