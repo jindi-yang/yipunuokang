@@ -244,7 +244,17 @@ select {
 }
 .footer {
     width: 100%;
-    background: #0063bd;
+    background: #333333;
+    color: #fff;
+    font-size: 13px;
+}
+.footer .top{
+	position: relative;
+	padding: 20px 0;
+}
+.footer .service-tel{
+	font-size: 17px;
+	padding: 0 20px;
 }
 .footer .contact_info{
 	color: #fff;
@@ -253,8 +263,20 @@ select {
 }
 .footer .foot_b{
 	width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    background: #222222;
+}
+.footer .wechat{
+	position: absolute;
+	top: 40%;
+	right: 30px;
+	width: 100px;
+	height: 80px;
+}
+.footer .wechat span{
+	font-size: 10px;
+	display: block;
 }
 .foot_b>ul{
 	display: inline-block;
@@ -273,7 +295,7 @@ select {
     font-size: 12px;
     color: #e1e1e1;
     margin-bottom: 0;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     text-align: center;
     padding: 0 20px;
 }

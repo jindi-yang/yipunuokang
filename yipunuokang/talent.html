@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="style/js/base.js"></script>
+		<script type="text/javascript" src="style/js/vue.min.js"></script>
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<div id="header">
+			<div class="max-width clearfix position">
+				<div class="logo">
+					<img src="style/images/logo.png">
+				</div>
+				<div class="nav">
+					<ul class="clearfix">
+						<li>
+							<a href="home.html">首页</a>
+						</li>
+						<li class="hasChild">
+							<a href="company.html">公司简介</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="about.html">关于我们</a>
+								</li>
+								<li>
+									<a href="development.html">发展历程</a>
+								</li>
+								<li>
+									<a href="culture.html">企业文化</a>
+								</li>
+								<li>
+									<a href="honor.html">企业荣誉</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="news.html">新闻资讯</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="##">企业新闻</a>
+								</li>
+								<li>
+									<a href="##">行业资讯</a>
+								</li>
+								<li>
+									<a href="##">会展信息</a>
+								</li>
+								<li>
+									<a href="##">文献汇编</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="product.html">产品中心</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="product.html?#regent">诊断试剂</a>
+								</li>
+								<li>
+									<a href="product.html?#project">特色项目</a>
+								</li>
+								<li>
+									<a href="product.html?#instrument">诊断仪器</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="talent.html" class="active">人才招聘</a>
+						</li>
+						<li>
+							<a href="contact.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="search">
+					<form>
+						<input type="text" placeholder="搜索">
+						<input type="submit" value="">
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+		<!--头部结束-->
+
+		<!--内容开始-->
+		<div id="company" class="talent">
+			<div class="banner banner-small"></div>
+			<div class="fix-nav">
+				<ul class="clearfix top-menu max-width">
+					<li class="active">
+						<a href="#talent">人才理念</a>
+					</li>
+					<li>
+						<a href="#welfare">薪酬福利</a>
+					</li>
+					<li>
+						<a href="#career">职业发展</a>
+					</li>
+					<li>
+						<a href="#recruitment">人才招聘</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--人才理念-->
+			<div class="background-color nav-part" id="talent">
+				<div class="max-width bottom-distance">
+					<div class="title">
+						<h2>人才理念</h2>
+						<h3>TALENT CONCEPT<i class="left-line"></i><i class="right-line"></i></h3>
+					</div>
+
+					<div class="clearfix about-box">
+						<div class="left">
+							<h3>人才理念<i></i></h3>
+							<div class="idea">
+								<h4>崇尚人生观、职业观、价值观的内在统一</h4>
+								<h4>崇尚以人为本，共同发展</h4>
+								<h4>崇尚知识，用我们卓越的文化支持员工的个人进步与学习</h4>
+								<h4>崇尚品德，选才必以德为先</h4>
+							</div>
+						</div>
+						<div class="right">
+							<img src="style/images/talent_1.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--人才理念结束-->
+			
+			<!--薪酬福利-->
+			<div class="nav-part max-width bottom-distance" id="welfare">
+				<div class="title">
+					<h2>薪酬福利</h2>
+					<h3>COMPENSATION BENEFITS <i class="left-line"></i><i class="right-line"></i></h3>
+				</div>
+				<div class="welfare">
+					<ul class="clearfix">
+						<li v-for="(item,index) in list" :key="index">
+							<div class="img">
+								<img :src="item.img">
+							</div>
+							<p>{{item.name}}</p>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			
+			
+
+			<!--职业发展-->
+			<div class="nav-part background-color" id="career">
+
+				<div class="max-width bottom-distance">
+					<div class="title">
+						<h2>职业发展</h2>
+						<h3>CAREER DEVELOPMENT<i class="left-line"></i><i class="right-line"></i></h3>
+					</div>
+
+					<div class="clearfix about-box culture">
+						<div class="left">
+							<h3>职业发展<i></i></h3>
+							<div>
+								<p>公司建立了完善的公司职级体系，为各类专业人才提供了更多的选择机会和发展空间。</p>
+								
+							</div>
+						</div>
+						<div class="right">
+							<img src="style/images/talent_3.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--职业发展结束-->
+
+			<!--人才招聘-->
+			<div class="nav-part" id="recruitment">
+
+				<div class="max-width bottom-distance">
+					<div class="title">
+						<h2>人才招聘</h2>
+						<h3>TALENT RECRUITMENT<i class="left-line"></i><i class="right-line"></i></h3>
+					</div>
+
+					<div class="clearfix about-box culture">
+						<div class="left">
+							<h3>人才招聘<i></i></h3>
+							<div>
+								伊普诺康重视从人才成长的早期入手，通过一系列创新的思维和行动，挖掘、开发、培养高潜质的人才。
+							</div>
+							<div class="more">
+								<a href="recruitment.html">MORE +</a>
+							</div>
+						</div>
+						<div class="right">
+							<img src="style/images/talent_4.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--人才招聘结束-->
+
+		</div>
+
+		<!--内容结束-->
+
+		<!--footer-->
+		<div class="footerPage"></div>
+		<!--footer--end-->
+
+	</body>
+	<script>
+		$(function() {
+
+			$(".headerPage").load("header.html")
+			$(".footerPage").load('footer.html')
+		});
+		new Vue({
+			el: '#company',
+			data: {
+				list: [{
+						name: '五险一金',
+						img: 'style/images/welfare_icon_1.png'
+					},
+					{
+						name: '带薪年假',
+						img: 'style/images/welfare_icon_2.png'
+					},
+					{
+						name: '生活补助',
+						img: 'style/images/welfare_icon_3.png'
+					},
+					{
+						name: '团建活动',
+						img: 'style/images/welfare_icon_4.png'
+					},
+					{
+						name: '年度旅游',
+						img: 'style/images/welfare_icon_5.png'
+					},
+					{
+						name: '节庆关怀',
+						img: 'style/images/welfare_icon_6.png'
+					},
+					{
+						name: '健康体检',
+						img: 'style/images/welfare_icon_7.png'
+					},
+					{
+						name: '多元培训',
+						img: 'style/images/welfare_icon_8.png'
+					}
+				]
+			}
+		})
+	</script>
+
+</html>

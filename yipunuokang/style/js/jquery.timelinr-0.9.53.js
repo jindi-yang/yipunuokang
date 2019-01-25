@@ -51,12 +51,14 @@ jQuery.fn.timelinr = function(options){
 		
 		var heightDates = $(settings.datesDiv).height();
 		var widthDate = $(settings.datesDiv+' li').width();
-		console.log(widthDates,widthDate)
+		//console.log(widthDates,widthDate)
 		var heightDate = $(settings.datesDiv+' li').height();
 		// set positions!
 		if(settings.orientation == 'horizontal') {	
 			$(settings.issuesDiv).width(widthIssue*howManyIssues);
 			$(settings.datesDiv).width(widthDate*howManyDates).css('marginLeft',widthContainer/2-widthDate/2);
+			//console.log(widthContainer/2)
+			//console.log(widthDate/2)
 			var defaultPositionDates = parseInt($(settings.datesDiv).css('marginLeft').substring(0,$(settings.datesDiv).css('marginLeft').indexOf('px')));
 		} else if(settings.orientation == 'vertical') {
 			$(settings.issuesDiv).height(heightIssue*howManyIssues);

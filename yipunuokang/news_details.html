@@ -1,190 +1,133 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="style/css/base.css" />
-		<link rel="stylesheet" href="style/css/details.css" />
+		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="style/js/vue.min.js"></script>
-		<script type="text/javascript" src="style/js/common.js" ></script>
-		
-	</head>
-	<body>
-			<!--menu-->
-		<div class="header">
-			<div class="header-bg"></div>
-			<div class="header-nav ">
-				<div class="max-Width clearfix top">
-					<div class="logo">
-						<a href="index.html">
-							<img src="style/images/logo_white.png">
-							<img src="style/images/logo.png" class="logB">
-						</a>
-					</div>
-					<div class="menu">
-						<ul class="clearfix">
-							<li>
-								<a href="product.html">产品与服务</a>
-							</li>
-							<li>
-								<a href="about.html">公司简介</a>
-							</li>
-							<li>
-								<a href="news.html">新闻中心</a>
-							</li>
-							<li>
-								<a href="recruit.html">人力资源</a>
-							</li>
-							<li>
-								<a href="contact.html">联系我们</a>
-							</li>
-						</ul>
-					</div>
-					<div class="search">
-						<div class="search-txt clearfix">
-							<input type="text">
-							<i class="search-btn"></i>
-						</div>
-						<span class="search-icon"></span>						
-					</div>
-				</div>
-				<div class="sub-nav">
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="news.html">系列产品</a>
-							</li>
-							<li>
-								<a href="">特色产品</a>
-							</li>
-							<li>
-								<a href="">新品推荐</a>
-							</li>
-							<li>
-								<a href="">品质管理</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="company_info.html">企业概括</a>
-							</li>
-							<li>
-								<a href="culture.html">企业文化</a>
-							</li>
-							<li>
-								<a href="development.html">发展历程</a>
-							</li>
-							<li>
-								<a href="">企业荣誉</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="news.html">公司新闻</a>
-							</li>
-							<li>
-								<a href="">行业资讯</a>
-							</li>
-							<li>
-								<a href="">会展资讯</a>
-							</li>
-							<li>
-								<a href="">文献汇编</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="recruit.html">人才理念</a>
-							</li>
-							<li>
-								<a href="recruit.html">职业发展</a>
-							</li>
-							<li>
-								<a href="recruit.html">福利待遇</a>
-							</li>
-							<li>
-								<a href="recruitment.html">人才招聘</a>
-							</li>
-						</ul>
-					</div>
 
+	</head>
+
+	<body>
+		<!--头部-->
+		<div id="header">
+			<div class="max-width clearfix position">
+				<div class="logo">
+					<img src="style/images/logo.png">
+				</div>
+				<div class="nav">
+					<ul class="clearfix">
+						<li>
+							<a href="home.html">首页</a>
+						</li>
+						<li class="hasChild">
+							<a href="company.html">公司简介</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="about.html">关于我们</a>
+								</li>
+								<li>
+									<a href="development.html">发展历程</a>
+								</li>
+								<li>
+									<a href="culture.html">企业文化</a>
+								</li>
+								<li>
+									<a href="honor.html">企业荣誉</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="news.html"  class="active">新闻资讯</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="##">企业新闻</a>
+								</li>
+								<li>
+									<a href="##">行业资讯</a>
+								</li>
+								<li>
+									<a href="##">会展信息</a>
+								</li>
+								<li>
+									<a href="##">文献汇编</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="product.html">产品中心</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="product.html?#regent">诊断试剂</a>
+								</li>
+								<li>
+									<a href="product.html?#project">特色项目</a>
+								</li>
+								<li>
+									<a href="product.html?#instrument">诊断仪器</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="talent.html">人才招聘</a>
+						</li>
+						<li>
+							<a href="contact.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="search">
+					<form>
+						<input type="text" placeholder="搜索">
+						<input type="submit" value="">
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+		<!--头部结束-->
+
+		<div class="background-color bottom-distance" id="news-details">
+			<div class="banner banner-small"></div>
+			<div class="max-width">
+				<div class="wrap">
+					<h2>重磅！伊普诺康和润达医疗达成“GPO”战略合作</h2>
+					<div class="small-txt">2018-10-31 09:54:59</div>
+					<p>近日，润达医疗在杭州西溪喜来登大酒店召开“GPO战略合作”会议。应润达的邀请，伊普诺康董事长蔡晓辉先生携公司主管销售副总参加了本次大会，并成功签约。</p>
+					<img src="style/images/news_1.png">
+					<div class="describe">润达总裁黄总与伊普诺康董事长蔡总等与会嘉宾合影</div>
+					<img src="style/images/news_4.png">
+					<div class="describe">董事长蔡晓辉先生与润达医疗副总裁彭华兵先生签约并交换协议文件</div>
+					<p>作为一家上市企业，润达医疗在体外诊断产品流通与服务领域已形成较为突出的竞争优势，其完善的综合服务体系，全方位地契合了医学实验室的应用及发展需求，积累了一大批优秀终端客户，形成了强大的品牌影响力。</p>
+					<p>随着国家医改的深入推进，以及各个省份集采平台的陆续推出，GPO的先发优势将更加凸显。在体外诊断领域提前布局GPO，更是润达医疗在流通与服务领域前瞻性战略和综合实力的体现。作为体外诊断行业内的研发、生产企业，伊普诺康能与润达医疗达成GPO合作，成功签约，倍感兴奋。</p>
+					<p>伊普诺康始终坚持以临床实际需求为导向，产品为王，尤其注重临床应用前沿等新项目的研发和引进，并配套建立覆盖新产品全周期的快速响应机制。自成立以来，经过6年点点滴滴的积累，伊普诺康已经探索并逐渐完善出了一条产品差异化发展路线。</p>
+					<p>公司现有注册产品80余项，涵盖肝功能、肾功能、心肌标志物、血脂、糖代谢、特种蛋白、肿瘤等品类。其中13项特色产品处于行业领先地位。此外，包括特定蛋白分析仪和生化分析仪在内的在注册产品达20余项，其中，特定蛋白分析仪将于2019年初上市，正式向POCT领域进军。</p>
+				</div>
+				<div class="clearfix next-sec">
+					<a href="" class="fl">
+						<i>←</i>
+						<span>上一篇：</span>
+					</a>
+					<a href="" class="fr">
+						<i>→</i>
+						<span>下一篇：</span>
+						<span>重磅！伊普诺康和润达医疗达成“GPO”战略合作</span>
+					</a>
 				</div>
 			</div>
 		</div>
-		
-		<div class="top-banner banner_news">
-			
 		</div>
-		<!--menu--end-->
-		
-		
-		<div class="max-Width wrap">
-			<div class="navigation"><a href="">首页</a><span class="margin10">></span><a href="">新闻中心</a><span class="margin10">></span>新闻内容</div>
-			<h2>重磅！伊普诺康和润达医疗达成“GPO”战略合作</h2>
-			<div class="small-txt">2018-10-31 09:54:59</div>
-			<p>近日，润达医疗在杭州西溪喜来登大酒店召开“GPO战略合作”会议。应润达的邀请，伊普诺康董事长蔡晓辉先生携公司主管销售副总参加了本次大会，并成功签约。</p>
-			<img src="style/images/news_1.png">
-			<div class="describe">润达总裁黄总与伊普诺康董事长蔡总等与会嘉宾合影</div>
-			<img src="style/images/news_4.png">
-			<div class="describe">董事长蔡晓辉先生与润达医疗副总裁彭华兵先生签约并交换协议文件</div>
-			<p>作为一家上市企业，润达医疗在体外诊断产品流通与服务领域已形成较为突出的竞争优势，其完善的综合服务体系，全方位地契合了医学实验室的应用及发展需求，积累了一大批优秀终端客户，形成了强大的品牌影响力。</p>
-			<p>随着国家医改的深入推进，以及各个省份集采平台的陆续推出，GPO的先发优势将更加凸显。在体外诊断领域提前布局GPO，更是润达医疗在流通与服务领域前瞻性战略和综合实力的体现。作为体外诊断行业内的研发、生产企业，伊普诺康能与润达医疗达成GPO合作，成功签约，倍感兴奋。</p>
-			<p>伊普诺康始终坚持以临床实际需求为导向，产品为王，尤其注重临床应用前沿等新项目的研发和引进，并配套建立覆盖新产品全周期的快速响应机制。自成立以来，经过6年点点滴滴的积累，伊普诺康已经探索并逐渐完善出了一条产品差异化发展路线。</p>
-			<p>公司现有注册产品80余项，涵盖肝功能、肾功能、心肌标志物、血脂、糖代谢、特种蛋白、肿瘤等品类。其中13项特色产品处于行业领先地位。此外，包括特定蛋白分析仪和生化分析仪在内的在注册产品达20余项，其中，特定蛋白分析仪将于2019年初上市，正式向POCT领域进军。</p>
-		</div>
-		
-		
-		<div class="footer ">
-			<ul class="max-Width clearfix">
-				<li>
-					<a href="">走进伊普诺康</a>
-					<a href="">企业概况</a>
-					<a href="">企业文化</a>
-					<a href="">发展历程</a>
-					<a href="">企业荣誉</a>
-					<a href="">企业责任</a>
-				</li>
-				<li>
-					<a href="">产品中心</a>
-					<a href="">系列产品</a>
-					<a href="">特色产品</a>
-					<a href="">新品推荐</a>
-					<a href="">品质管理</a>
-				</li>
-				<li>
-					<a href="">资讯中心</a>
-					<a href="">企业新闻</a>
-					<a href="">行业资讯</a>
-					<a href="">会展信息</a>
-					<a href="">文献汇编</a>
-				</li>				
-				<li>
-					<a href="">人力资源</a>
-					<a href="">职业发展</a>
-					<a href="">人才理念</a>
-					<a href="">福利待遇</a>
-					<a href="">人才招聘</a>
-				</li>
-				<li>
-					<a href="">联系我们</a>
-					<a href="">联系我们</a>
-				</li>
-				<li>
-					<div class="footer-weixin">
-						<img src="style/images/weixin.png">
-					</div>
-				</li>
-			</ul>			
-		</div>
-		<div class="copy">
-			<p>Copyright 2015-2017 All rights reserved. 安徽伊普诺康生物技术股份有限公司</p>
-		</div>
+
+		<!--footer-->
+		<div class="footerPage"></div>
+		<!--footer-end-->
 	</body>
+	<script>
+		$(".headerPage").load("header.html");
+		$(".footerPage").load('footer.html')
+	</script>
+
 </html>

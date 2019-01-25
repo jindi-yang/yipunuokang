@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="style/js/vue.min.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div id="header">
+			<div class="max-width clearfix position">
+				<div class="logo">
+					<img src="style/images/logo.png">
+				</div>
+				<div class="nav">
+					<ul class="clearfix">
+						<li>
+							<a href="home.html">首页</a>
+						</li>
+						<li class="hasChild">
+							<a href="company.html">公司简介</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="about.html">关于我们</a>
+								</li>
+								<li>
+									<a href="development.html">发展历程</a>
+								</li>
+								<li>
+									<a href="culture.html">企业文化</a>
+								</li>
+								<li>
+									<a href="honor.html">企业荣誉</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="news.html">新闻资讯</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="##">企业新闻</a>
+								</li>
+								<li>
+									<a href="##">行业资讯</a>
+								</li>
+								<li>
+									<a href="##">会展信息</a>
+								</li>
+								<li>
+									<a href="##">文献汇编</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="product.html" class="active">产品中心</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="product.html?#regent">诊断试剂</a>
+								</li>
+								<li>
+									<a href="product.html?#project">特色项目</a>
+								</li>
+								<li>
+									<a href="product.html?#instrument">诊断仪器</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="talent.html">人才招聘</a>
+						</li>
+						<li>
+							<a href="contact.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="search">
+					<form>
+						<input type="text" placeholder="搜索">
+						<input type="submit" value="">
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+		<!--头部结束-->
+
+		<!--content-->
+		<div class="background-color bottom-distance" id="product-list">
+			<div class="banner banner-small"></div>
+			<div class="title">
+				<h2>肝功能系列</h2>
+				<h3>HEPATIC SERIES<i class="left-line"></i><i class="right-line"></i></h3>
+			</div>
+			<div class="max-width">
+				<div class="table">
+					<table>
+						<tr>
+							<th>产品名称</th>
+							<th>英文缩写</th>
+							<th>方法学</th>
+							<th>试剂比</th>
+						</tr>
+						<tr v-for="(item,index) in list" :key="index">
+							<td class="name">{{item.name}}</td>
+							<td>{{item.enName}}</td>
+							<td>{{item.method}}</td>
+							<td>{{item.reagent}}</td>
+						</tr>
+					</table>
+					<div class="clearfix next-sec">
+						<a href="" class="fl">
+							<i>←</i>
+							<span>上一个：</span>
+						</a>
+						<a href="" class="fr">
+							<i>→</i>
+							<span>下一个：</span>
+							<span>肝纤系列</span>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--content-end-->
+
+		<!--footer-->
+		<div class="footerPage"></div>
+		<!--footer-end-->
+	</body>
+	<script>
+		$(".headerPage").load("header.html");
+		$(".footerPage").load('footer.html')
+
+		new Vue({
+			el: "#product-list",
+			data: {
+				list: [{
+						name: '天冬氨酸氨基转移酶',
+						enName: 'AST',
+						method: '速率法',
+						reagent: '2:1'
+					},
+					{
+						name: '丙氨酸氨基转移酶',
+						enName: 'ALT',
+						method: '速率法',
+						reagent: '2:1'
+					},
+					{
+						name: '总胆红素',
+						enName: 'TBIL',
+						method: '氧化法',
+						reagent: '4:1'
+					},
+					{
+						name: '直接胆红素',
+						enName: 'TBIL',
+						method: '氧化法',
+						reagent: '4:1'
+					},
+					{
+						name: '总胆汁酸',
+						enName: 'TBA',
+						method: '酶循环法',
+						reagent: '3:1'
+					},
+					{
+						name: '天门冬氨酸氨基转移酶线粒体同工酶',
+						enName: 'mAST',
+						method: '酶抑制法',
+						reagent: '4:1'
+					},
+					{
+						name: '甘氨酰脯氨酸二肽氨基肽酶',
+						enName: 'GPDA',
+						method: '速率法',
+						reagent: '3:1'
+					}
+				]
+			}
+		})
+	</script>
+
+</html>

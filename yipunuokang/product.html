@@ -4,213 +4,328 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="style/css/base.css" />
-		<link rel="stylesheet" href="style/css/culture.css" />
+		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/css/animate.min.css" />
+		<link rel="stylesheet" href="style/plugin/swiper/css/swiper.min.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
+		<script type="text/javascript" src="style/plugin/swiper/js/swiper.min.js"></script>
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="style/js/common.js" ></script>
+		<script type="text/javascript" src="style/js/base.js"></script>
 	</head>
-	
+
 	<body>
-		<!--menu-->
-		<div class="header">
-			<div class="header-bg"></div>
-			<div class="header-nav ">
-				<div class="max-Width clearfix top">
-					<div class="logo">
-						<a href="index.html">
-							<img src="style/images/logo_white.png">
-							<img src="style/images/logo.png" class="logB">
-						</a>
-					</div>
-					<div class="menu">
-						<ul class="clearfix">
-							<li>
-								<a href="product.html">产品与服务</a>
+		<!--头部-->
+		<div id="header">
+			<div class="max-width clearfix position">
+				<div class="logo">
+					<img src="style/images/logo.png">
+				</div>
+				<div class="nav">
+					<ul class="clearfix">
+						<li>
+							<a href="home.html">首页</a>
+						</li>
+						<li class="hasChild">
+							<a href="company.html">公司简介</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="about.html">关于我们</a>
+								</li>
+								<li>
+									<a href="development.html">发展历程</a>
+								</li>
+								<li>
+									<a href="culture.html">企业文化</a>
+								</li>
+								<li>
+									<a href="honor.html">企业荣誉</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="news.html">新闻资讯</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="##">企业新闻</a>
+								</li>
+								<li>
+									<a href="##">行业资讯</a>
+								</li>
+								<li>
+									<a href="##">会展信息</a>
+								</li>
+								<li>
+									<a href="##">文献汇编</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="product.html" class="active">产品中心</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="product.html?#regent">诊断试剂</a>
+								</li>
+								<li>
+									<a href="product.html?#project">特色项目</a>
+								</li>
+								<li>
+									<a href="product.html?#instrument">诊断仪器</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="talent.html">人才招聘</a>
+						</li>
+						<li>
+							<a href="contact.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="search">
+					<form>
+						<input type="text" placeholder="搜索">
+						<input type="submit" value="">
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+		<!--头部结束-->
+
+		<!--内容开始-->
+		<div id="product">
+			<!--试剂开始-->
+			<div class="background-color reagent">
+				<div class="banner banner-small"></div>
+				<div class="max-width">
+					<div class="fix-nav">
+						<ul class="clearfix top-menu max-width width33">
+							<li class="active">
+								<a href="#regent">诊断试剂</a>
 							</li>
 							<li>
-								<a href="about.html">公司简介</a>
+								<a href="#project">特色项目</a>
 							</li>
 							<li>
-								<a href="news.html">新闻中心</a>
-							</li>
-							<li>
-								<a href="recruit.html">人力资源</a>
-							</li>
-							<li>
-								<a href="contact.html">联系我们</a>
+								<a href="#instrument">诊断仪器</a>
 							</li>
 						</ul>
 					</div>
-					<div class="search">
-						<div class="search-txt clearfix">
-							<input type="text">
-							<i class="search-btn"></i>
+					<div class="nav-part">
+						<div class="title">
+							<h2>诊断试剂</h2>
+							<h3>REAGENT<i class="left-line"></i><i class="right-line"></i></h3>
 						</div>
-						<span class="search-icon"></span>						
+						<div class="list" id="regent">
+							<ul class="clearfix">
+								<li>
+									<a href="product_list.html">
+										<div><img src="style/images/product_icon_1.png"></div>
+										<span>肝功能系列</span>
+										<span>Heapatic Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_2.png"></div>
+										<span>肝纤系列</span>
+										<span>Heapatic Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_3.png"></div>
+										<span>肾功能系列</span>
+										<span>Renal Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_4.png"></div>
+										<span>糖代谢系列</span>
+										<span>Diabetes Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_5.png"></div>
+										<span>心肌类系列</span>
+										<span>Cardiac Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_6.png"></div>
+										<span>血脂系列</span>
+										<span>Lipid Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_7.png"></div>
+										<span>风湿类系列</span>
+										<span>Rheuma Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_8.png"></div>
+										<span>炎症/特种蛋白系列</span>
+										<span>Special Protein Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_9.png"></div>
+										<span>肿瘤类系列</span>
+										<span>Tumour Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_10.png"></div>
+										<span>凝血系列</span>
+										<span>Cruor Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_11.png"></div>
+										<span>胰腺系列</span>
+										<span>Pancreas Series</span>
+									</a>
+								</li>
+								<li>
+									<a href="##">
+										<div><img src="style/images/product_icon_12.png"></div>
+										<span>其他</span>
+										<span>Other Series</span>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="sub-nav">
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="news.html">系列产品</a>
-							</li>
-							<li>
-								<a href="">特色产品</a>
-							</li>
-							<li>
-								<a href="">新品推荐</a>
-							</li>
-							<li>
-								<a href="">品质管理</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="company_info.html">企业概括</a>
-							</li>
-							<li>
-								<a href="culture.html">企业文化</a>
-							</li>
-							<li>
-								<a href="development.html">发展历程</a>
-							</li>
-							<li>
-								<a href="">企业荣誉</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="news.html">公司新闻</a>
-							</li>
-							<li>
-								<a href="">行业资讯</a>
-							</li>
-							<li>
-								<a href="">会展资讯</a>
-							</li>
-							<li>
-								<a href="">文献汇编</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="recruit.html">人才理念</a>
-							</li>
-							<li>
-								<a href="recruit.html">职业发展</a>
-							</li>
-							<li>
-								<a href="recruit.html">福利待遇</a>
-							</li>
-							<li>
-								<a href="recruitment.html">人才招聘</a>
-							</li>
-						</ul>
+			</div>
+
+			<!--特色项目-->
+			<div class="max-width nav-part special-project bottom-distance" id="project">
+				<div class="title">
+					<h2>特色项目</h2>
+					<h3>SPECIAL PROJECT<i class="left-line"></i><i class="right-line"></i></h3>
+				</div>
+				<div class="swiper-container ">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="product_details.html">
+								<div><img src="style/images/special_icon_1.jpg"></div>
+								<p>糖化白蛋白测定试剂盒</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="product_details.html">
+								<div><img src="style/images/special_icon_1.jpg"></div>
+								<p>糖化白蛋白测定试剂盒</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="product_details.html">
+								<div><img src="style/images/special_icon_1.jpg"></div>
+								<p>糖化白蛋白测定试剂盒</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="product_details.html">
+								<div><img src="style/images/special_icon_1.jpg"></div>
+								<p>糖化白蛋白测定试剂盒</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="product_details.html">
+								<div><img src="style/images/special_icon_1.jpg"></div>
+								<p>糖化白蛋白测定试剂盒</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="product_details.html">
+								<div><img src="style/images/special_icon_1.jpg"></div>
+								<p>糖化白蛋白测定试剂盒</p>
+							</a>
+						</div>
 					</div>
 
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="top-banner banner_product">
-			
-		</div>
-		<!--menu--end-->
-		
-		<div class="wrap max-Width">
-			<div class="navigation">
-				<a href="index.html">首页</a><span class="margin10">></span>
-				产品分类</div>
-			<div class="culture">
-				<div class="clearfix feature">
-					<div class="info fl">
-						<a href="product_category.html">						
-							<h2>最新产品<i>NEW PRODUCTS</i><span></span></h2>
-							<div class="txt">最新产品包含肝、肾、血脂血糖、心肌酶、特定蛋白、肿瘤类、风湿、等其他系列</div>
-						</a>
+			<!--仪器-->
+			<div class="background-color bottom-distance apparatus nav-part" id="instrument">
+				<div class="max-width">
+					<div class="title">
+						<h2>诊断仪器</h2>
+						<h3>APPARATUS<i class="left-line"></i><i class="right-line"></i></h3>
 					</div>
-					<div class="pic fr">
-						<img src="style/images/poduct_1.png">
+					<div class="clearfix">
+						<div class="box">
+							<img src="style/images/protein.png">
+							<a href="" class="pic">
+								<p>特定蛋白仪：梦T200plus</p>
+							</a>
+						</div>
+						<div class="see-more">
+							<p>特定蛋白仪：梦T200plus</p>
+							<a href="#">MORE + </a>
+						</div>
 					</div>
+
+					<!--<div>
+						<ul class="clearfix">
+							<li>
+								<img src="style/images/protein.png">
+								<a href="">
+									<p>特定蛋白仪：梦T200plus</p>
+								</a>
+							</li>
+						</ul>
+					</div>-->
 				</div>
-				<div class="clearfix feature">
-					<div class="pic fl">
-						<img src="style/images/product_2.png">
-					</div>
-					<div class="info fr">
-						<h2>特色产品<i>FEATURED PRODUCTS</i><span></span></h2>
-						<div class="txt">都将秉承这一宗旨，作为伊普诺康发展的终极使命。</div>
-					</div>
-				</div>
-				<div class="clearfix feature">
-					<div class="info fl">
-						<a href="product_category.html">						
-							<h2>系列产品<i>SERIES PRODUCTS</i><span></span></h2>
-							<div class="txt">系列产品包含肝、肾、血脂血糖、心肌酶、特定蛋白、肿瘤类、风湿、等其他系列</div>
-						</a>
-					</div>
-					<div class="pic fr">
-						<img src="style/images/culture_2.jpg">
-					</div>
-				</div>
-				
-				
 			</div>
+
 		</div>
-		
+		<!--内容结束-->
+
 		<!--footer-->
-		<div class="footer ">
-			<ul class="max-Width clearfix">
-				<li>
-					<a href="">走进伊普诺康</a>
-					<a href="">企业概况</a>
-					<a href="">企业文化</a>
-					<a href="">发展历程</a>
-					<a href="">企业荣誉</a>
-					<a href="">企业责任</a>
-				</li>
-				<li>
-					<a href="">产品中心</a>
-					<a href="">系列产品</a>
-					<a href="">特色产品</a>
-					<a href="">新品推荐</a>
-					<a href="">品质管理</a>
-				</li>
-				<li>
-					<a href="">资讯中心</a>
-					<a href="">企业新闻</a>
-					<a href="">行业资讯</a>
-					<a href="">会展信息</a>
-					<a href="">文献汇编</a>
-				</li>
-				<li>
-					<a href="">人力资源</a>
-					<a href="">职业发展</a>
-					<a href="">人才理念</a>
-					<a href="">福利待遇</a>
-					<a href="">人才招聘</a>
-				</li>
-				<li>
-					<a href="">联系我们</a>
-					<a href="">联系我们</a>
-				</li>
-				<li>
-					<div class="footer-weixin">
-						<img src="style/images/weixin.png">
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="copy">
-			<p>Copyright 2015-2017 All rights reserved. 安徽伊普诺康生物技术股份有限公司</p>
-		</div>
+		<div class="footerPage"></div>
+		<!--footer-end-->
 	</body>
+	<script>
+		$(".headerPage").load("header.html");
+
+		$(".footerPage").load('footer.html')
+		$(".box").hover(function() {
+			console.log(1)
+			$(this).find(".pic").stop().animate({
+				bottom: "0"
+			}, 400);
+		}, function() {
+			$(this).find(".pic").stop().animate({
+				bottom: "-100%"
+			}, 400);
+		})
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			slidesPerGroup: 3,
+			loop: true,
+			loopFillGroupWithBlank: true,
+
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	</script>
 
 </html>

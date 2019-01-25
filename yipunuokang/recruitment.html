@@ -4,162 +4,128 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="style/css/base.css" />
-		<link rel="stylesheet" href="style/css/recruitment.css" />
+		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="style/js/vue.min.js"></script>
-		<script type="text/javascript" src="style/js/common.js" ></script>
+		<script type="text/javascript" src="style/js/base.js"></script>
 	</head>
 
 	<body>
-			<!--menu-->
-		<div class="header">
-			<div class="header-bg"></div>
-			<div class="header-nav ">
-				<div class="max-Width clearfix top">
-					<div class="logo">
-						<a href="index.html">
-							<img src="style/images/logo_white.png">
-							<img src="style/images/logo.png" class="logB">
-						</a>
-					</div>
-					<div class="menu">
-						<ul class="clearfix">
-							<li>
-								<a href="product.html">产品与服务</a>
-							</li>
-							<li>
-								<a href="about.html">公司简介</a>
-							</li>
-							<li>
-								<a href="news.html">新闻中心</a>
-							</li>
-							<li>
-								<a href="recruit.html">人力资源</a>
-							</li>
-							<li>
-								<a href="contact.html">联系我们</a>
-							</li>
-						</ul>
-					</div>
-					<div class="search">
-						<div class="search-txt clearfix">
-							<input type="text">
-							<i class="search-btn"></i>
-						</div>
-						<span class="search-icon"></span>						
-					</div>
+		<!--头部-->
+		<div id="header">
+			<div class="max-width clearfix position">
+				<div class="logo">
+					<img src="style/images/logo.png">
 				</div>
-				<div class="sub-nav">
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="news.html">系列产品</a>
-							</li>
-							<li>
-								<a href="">特色产品</a>
-							</li>
-							<li>
-								<a href="">新品推荐</a>
-							</li>
-							<li>
-								<a href="">品质管理</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="company_info.html">企业概括</a>
-							</li>
-							<li>
-								<a href="culture.html">企业文化</a>
-							</li>
-							<li>
-								<a href="development.html">发展历程</a>
-							</li>
-							<li>
-								<a href="">企业荣誉</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="news.html">公司新闻</a>
-							</li>
-							<li>
-								<a href="">行业资讯</a>
-							</li>
-							<li>
-								<a href="">会展资讯</a>
-							</li>
-							<li>
-								<a href="">文献汇编</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="recruit.html">人才理念</a>
-							</li>
-							<li>
-								<a href="recruit.html">职业发展</a>
-							</li>
-							<li>
-								<a href="recruit.html">福利待遇</a>
-							</li>
-							<li>
-								<a href="recruitment.html">人才招聘</a>
-							</li>
-						</ul>
-					</div>
-
+				<div class="nav">
+					<ul class="clearfix">
+						<li>
+							<a href="home.html">首页</a>
+						</li>
+						<li class="hasChild">
+							<a href="company.html">公司简介</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="about.html">关于我们</a>
+								</li>
+								<li>
+									<a href="development.html">发展历程</a>
+								</li>
+								<li>
+									<a href="culture.html">企业文化</a>
+								</li>
+								<li>
+									<a href="honor.html">企业荣誉</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="news.html">新闻资讯</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="##">企业新闻</a>
+								</li>
+								<li>
+									<a href="##">行业资讯</a>
+								</li>
+								<li>
+									<a href="##">会展信息</a>
+								</li>
+								<li>
+									<a href="##">文献汇编</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="product.html">产品中心</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="product.html?#regent">诊断试剂</a>
+								</li>
+								<li>
+									<a href="product.html?#project">特色项目</a>
+								</li>
+								<li>
+									<a href="product.html?#instrument">诊断仪器</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="talent.html" class="active">人才招聘</a>
+						</li>
+						<li>
+							<a href="contact.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="search">
+					<form>
+						<input type="text" placeholder="搜索">
+						<input type="submit" value="">
+					</form>
 				</div>
 			</div>
+
 		</div>
-		
-		<div class="top-banner banner_recruit">
-			
-		</div>
-		<!--menu--end-->
-		
-		
-		
-		
-		<div class="wrap max-Width clearfix">
-			<div class="navigation">
-				<a href="">首页</a><span class="margin10">></span>
-				<a href="">职业发展</a><span class="margin10">></span>招聘详情</div>
-			<h3 class="margin50">人才招聘</h3>
-			<div class="left">
-				<ul>
+
+		<!--头部结束-->
+
+		<!--content-->
+		<div class="background-color bottom-distance">
+			<div class="banner banner-small"></div>
+			<div class="title">
+				<h2>人才招聘</h2>
+				<h3>TALENT RECRUITMENT<i class="left-line"></i><i class="right-line"></i></h3>
+			</div>
+			<div class="max-width job">
+				<ul class="list">
 					<li>
 						<dl>
 							<dt>
 								<span>职位名称</span>
-								<span>职位地点</span>
+								<span>工作地点</span>
+								<span>招聘人数</span>
 								<span>发布时间</span>
 							</dt>
 						</dl>
 					</li>
 					<li>
-						<dl class="list">
+						<dl>
 							<dt>
 								<span>医疗设备技术工程师</span>
 								<span>浙江省及全国市场</span>
+								<span>若干</span>
 								<span>2018-06-12</span>
-								<b class="select"></b>
+								
 							</dt>
-							<dd class="hide">
-								<p class="title">职位描述 ：</p>
+							<dd class="hide recruit-info">
+								<p>职位描述 ：</p>
 								<p>1、负责公司生化试剂的售后服务，为客户提供必要的技术指导和培训，包括电话及现场技术支持；</p>
 								<p>2、负责制作公司产品的相关技术文档； </p>
 								<p>3、负责公司产品使用情况收集报告； </p>
 								<p>4、负责市场竞争产品的信息收集报告；</p>
 								<p>5、公司安排的其他工作。</p>
-								<p class="title">职位要求：</p>
+								<p>职位要求：</p>
 								<p>1、身体健康，品行端正，勤奋诚信；</p>
 								<p>2、大专及以上学历，医学检验专业毕业； </p>
 								<p>3、具备优秀的学习能力和沟通能力； </p>
@@ -170,21 +136,22 @@
 						</dl>
 					</li>
 					<li>
-						<dl class="list">
+						<dl>
 							<dt>
 							<span>产品经理（专员）</span>
 							<span>浙江省及全国市场</span>
+							<span>若干</span>
 							<span>2018-06-12</span>
-							<b class="select"></b>
+							
 						</dt>
-							<dd class="hide">
-								<p class="title">职位描述 ：</p>
+							<dd class="hide recruit-info">
+								<p>职位描述 ：</p>
 								<p>1、负责公司生化试剂的售后服务，为客户提供必要的技术指导和培训，包括电话及现场技术支持；</p>
 								<p>2、负责制作公司产品的相关技术文档； </p>
 								<p>3、负责公司产品使用情况收集报告； </p>
 								<p>4、负责市场竞争产品的信息收集报告；</p>
 								<p>5、公司安排的其他工作。</p>
-								<p class="title">职位要求：</p>
+								<p>职位要求：</p>
 								<p>1、身体健康，品行端正，勤奋诚信；</p>
 								<p>2、大专及以上学历，医学检验专业毕业； </p>
 								<p>3、具备优秀的学习能力和沟通能力； </p>
@@ -195,21 +162,22 @@
 						</dl>
 					</li>
 					<li>
-						<dl class="list">
+						<dl>
 							<dt>
 							<span>研发总监（经理）</span>
 							<span>浙江省及全国市场</span>
+							<span>若干</span>
 							<span>2018-06-12</span>
-							<b class="select"></b>
+							
 						</dt>
-							<dd class="hide">
-								<p class="title">职位描述 ：</p>
+							<dd class="hide recruit-info">
+								<p>职位描述 ：</p>
 								<p>1、负责公司生化试剂的售后服务，为客户提供必要的技术指导和培训，包括电话及现场技术支持；</p>
 								<p>2、负责制作公司产品的相关技术文档； </p>
 								<p>3、负责公司产品使用情况收集报告； </p>
 								<p>4、负责市场竞争产品的信息收集报告；</p>
 								<p>5、公司安排的其他工作。</p>
-								<p class="title">职位要求：</p>
+								<p>职位要求：</p>
 								<p>1、身体健康，品行端正，勤奋诚信；</p>
 								<p>2、大专及以上学历，医学检验专业毕业； </p>
 								<p>3、具备优秀的学习能力和沟通能力； </p>
@@ -220,21 +188,23 @@
 						</dl>
 					</li>
 					<li>
-						<dl class="list">
+						<dl>
 							<dt>
-							<span>伊普诺康招聘业务精英</span>
+							<span>业务精英</span>
 							<span>浙江省及全国市场</span>
+							<span>若干</span>
 							<span>2018-06-12</span>
-							<b class="select"></b>
+							
+							
 						</dt>
-							<dd class="hide">
-								<p class="title">职位描述 ：</p>
+							<dd class="hide recruit-info">
+								<p>职位描述 ：</p>
 								<p>1、负责公司生化试剂的售后服务，为客户提供必要的技术指导和培训，包括电话及现场技术支持；</p>
 								<p>2、负责制作公司产品的相关技术文档； </p>
 								<p>3、负责公司产品使用情况收集报告； </p>
 								<p>4、负责市场竞争产品的信息收集报告；</p>
 								<p>5、公司安排的其他工作。</p>
-								<p class="title">职位要求：</p>
+								<p>职位要求：</p>
 								<p>1、身体健康，品行端正，勤奋诚信；</p>
 								<p>2、大专及以上学历，医学检验专业毕业； </p>
 								<p>3、具备优秀的学习能力和沟通能力； </p>
@@ -245,77 +215,53 @@
 						</dl>
 					</li>
 				</ul>
-			</div>
-			<div class="right">
-				<h2>招聘联系</h2>
-				<span>招聘热线：15256584919-宋经理</span>
-				<span>邮箱：songkui5188@163.com</span>
-				<div class="attention"><img src="style/images/weixin.png"></div>
-				<span>更多职位详情扫描二维码</span>
-				<span>关注伊普诺康官方微信的人力资源版块</span>
-			</div>
 
+				<div class="page">
+					<ul class="clearfix">
+						<li class="disabled">
+							<a href="javascript:;"><span>«</span></a>
+						</li>
+						<li class="active">
+							<a href="javascript:;">1</a>
+						</li>
+						<li>
+							<a href="javascript:;">2</a>
+						</li>
+						<li>
+							<a href="javascript:;">3</a>
+						</li>
+						<li>
+							<a href="javascript:;">···</a>
+						</li>
+						<li>
+							<a href="javascript:;">9</a>
+						</li>
+						<li>
+							<a href="javascript:;"><span>»</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		
+
+		<!--content-end -->
+
 		<!--footer-->
-		<div class="footer ">
-			<ul class="max-Width clearfix">
-				<li>
-					<a href="">走进伊普诺康</a>
-					<a href="">企业概况</a>
-					<a href="">企业文化</a>
-					<a href="">发展历程</a>
-					<a href="">企业荣誉</a>
-					<a href="">企业责任</a>
-				</li>
-				<li>
-					<a href="">产品中心</a>
-					<a href="">系列产品</a>
-					<a href="">特色产品</a>
-					<a href="">新品推荐</a>
-					<a href="">品质管理</a>
-				</li>
-				<li>
-					<a href="">资讯中心</a>
-					<a href="">企业新闻</a>
-					<a href="">行业资讯</a>
-					<a href="">会展信息</a>
-					<a href="">文献汇编</a>
-				</li>
-				<li>
-					<a href="">人力资源</a>
-					<a href="">职业发展</a>
-					<a href="">人才理念</a>
-					<a href="">福利待遇</a>
-					<a href="">人才招聘</a>
-				</li>
-				<li>
-					<a href="">联系我们</a>
-					<a href="">联系我们</a>
-				</li>
-				<li>
-					<div class="footer-weixin">
-						<img src="style/images/weixin.png">
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="copy">
-			<p>Copyright 2015-2017 All rights reserved. 安徽伊普诺康生物技术股份有限公司</p>
-		</div>
+		<div class="footerPage"></div>
+		<!--footer--end-->
 	</body>
 	<script>
-		$(".select").click(function() {
-			var $box = $(this).parent().next();
-			if($box[0].style.display == 'none') {
-				$(this).addClass('rotate');
-				$box.show();
-			} else {
-				$(this).removeClass('rotate');
-				$box.hide();
-			}
+		$(function() {
 
-		})
+			$(".headerPage").load("header.html")
+			$(".footerPage").load('footer.html')
+
+			$(".job .list li dl").click(function() {
+				$(this).parent("li").toggleClass('selected').find(".recruit-info").slideToggle();
+				$(this).parent("li").siblings().removeClass('selected');
+				$(this).parent("li").siblings().find(".recruit-info").slideUp();
+			})
+		});
 	</script>
 
 </html>

@@ -4,196 +4,136 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="style/css/base.css" />
-		<link rel="stylesheet" href="style/css/product_details.css" />
+		<link rel="stylesheet" href="style/css/common.css" />
+		<link rel="stylesheet" href="style/css/style.css" />
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="style/js/common.js" ></script>
+		<script type="text/javascript" src="style/js/base.js"></script>
 	</head>
 
 	<body>
-		<!--menu-->
-		<div class="header">
-			<div class="header-bg"></div>
-			<div class="header-nav ">
-				<div class="max-Width clearfix top">
-					<div class="logo">
-						<a href="index.html">
-							<img src="style/images/logo_white.png">
-							<img src="style/images/logo.png" class="logB">
-						</a>
-					</div>
-					<div class="menu">
-						<ul class="clearfix">
-							<li>
-								<a href="product.html">产品与服务</a>
-							</li>
-							<li>
-								<a href="about.html">公司简介</a>
-							</li>
-							<li>
-								<a href="news.html">新闻中心</a>
-							</li>
-							<li>
-								<a href="recruit.html">人力资源</a>
-							</li>
-							<li>
-								<a href="contact.html">联系我们</a>
-							</li>
-						</ul>
-					</div>
-					<div class="search">
-						<div class="search-txt clearfix">
-							<input type="text">
-							<i class="search-btn"></i>
-						</div>
-						<span class="search-icon"></span>						
-					</div>
+		<!--头部-->
+		<div id="header">
+			<div class="max-width clearfix position">
+				<div class="logo">
+					<img src="style/images/logo.png">
 				</div>
-				<div class="sub-nav">
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="news.html">系列产品</a>
-							</li>
-							<li>
-								<a href="">特色产品</a>
-							</li>
-							<li>
-								<a href="">新品推荐</a>
-							</li>
-							<li>
-								<a href="">品质管理</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="company_info.html">企业概括</a>
-							</li>
-							<li>
-								<a href="culture.html">企业文化</a>
-							</li>
-							<li>
-								<a href="development.html">发展历程</a>
-							</li>
-							<li>
-								<a href="">企业荣誉</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="news.html">公司新闻</a>
-							</li>
-							<li>
-								<a href="">行业资讯</a>
-							</li>
-							<li>
-								<a href="">会展资讯</a>
-							</li>
-							<li>
-								<a href="">文献汇编</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-nav-list hide">
-						<ul>
-							<li>
-								<a href="recruit.html">人才理念</a>
-							</li>
-							<li>
-								<a href="recruit.html">职业发展</a>
-							</li>
-							<li>
-								<a href="recruit.html">福利待遇</a>
-							</li>
-							<li>
-								<a href="recruitment.html">人才招聘</a>
-							</li>
-						</ul>
-					</div>
+				<div class="nav">
+					<ul class="clearfix">
+						<li>
+							<a href="home.html">首页</a>
+						</li>
+						<li class="hasChild">
+							<a href="company.html">公司简介</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="about.html">关于我们</a>
+								</li>
+								<li>
+									<a href="development.html">发展历程</a>
+								</li>
+								<li>
+									<a href="culture.html">企业文化</a>
+								</li>
+								<li>
+									<a href="honor.html">企业荣誉</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="news.html">新闻资讯</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="##">企业新闻</a>
+								</li>
+								<li>
+									<a href="##">行业资讯</a>
+								</li>
+								<li>
+									<a href="##">会展信息</a>
+								</li>
+								<li>
+									<a href="##">文献汇编</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="product.html" class="active">产品中心</a>
+							<ul class="drop-nav hide animated fadeIn">
+								<li>
+									<a href="product.html?#regent">诊断试剂</a>
+								</li>
+								<li>
+									<a href="product.html?#project">特色项目</a>
+								</li>
+								<li>
+									<a href="product.html?#instrument">诊断仪器</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="talent.html">人才招聘</a>
+						</li>
+						<li>
+							<a href="contact.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="search">
+					<form>
+						<input type="text" placeholder="搜索">
+						<input type="submit" value="">
+					</form>
+				</div>
+			</div>
 
+		</div>
+
+		<!--头部结束-->
+
+		<!--content-->
+		<div class="background-color" id="product-details">
+			<div class="banner banner-small"></div>
+			<div class="max-width bottom-distance">
+				<div class="title">
+					<h2>产品详情</h2>
+					<h3>PRODUCT DETAILS<i class="left-line"></i><i class="right-line"></i></h3>
+				</div>
+				<div class="sec">
+					<div class="img">
+						<img src="style/images/APOB.png">
+					</div>
+					<div class="info min-width">
+						<p><b>产品简称：</b>Lp-PLA2</p>
+						<p><b>产品名称：</b>脂蛋白磷脂酶A2测定试剂盒</p>
+						<p><b>英文名称：</b>Lp-PLA2</p>
+						<p><b>检测方法：</b>胶乳增强免疫比浊法</p>
+						<!--<p><b>剂&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</b></p>-->
+						<p><b>临床意义：</b></p>
+						<div class="clinic">
+							<h4><i></i>1.Lp-PLA2是评价斑块稳定性的优秀指标</h4>
+							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此
+							与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。</p>
+							<h4><i></i>2.Lp-PLA2比hs-CRP、LDL更具血管炎症特异性</h4>
+							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此
+							与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。</p>
+							<h4><i></i>3.Lp-PLA2是心血管事件的独立预测因子</h4>
+							<p>主要以脂蛋白的形式存在，它能通过水解氧化低密度脂蛋白分子中的氧化卵磷脂，使其发生促炎物质溶血卵磷脂和氧化型游离脂肪酸而起到促动脉粥样硬化作用，因此
+							与动脉粥样硬化的发生、发展密切相关，能反映动脉粥样斑块稳定性。</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		
-		<div class="top-banner">
-			
-		</div>
-		<!--menu--end-->
-		<div class="wrap max-Width">
-			<div class="navigation">
-				<a href="">首页</a><span class="margin10">></span>
-				<a href="">产品介绍</a><span class="margin10">></span>产品详情
-			</div>
-			<div class="product-sec clearfix">
-				<div class="img">
-					<img src="style/images/product.jpg">
-				</div>
-				<div class="txt">
-					<h2>亮氨酰氨基肽酶测定试剂盒</h2>
-					<div>
-						<h3>1、产品的预期用途</h3>
-						<p>本试剂盒采用速率法体外测定人体血清中亮氨酸氨基肽酶的含量。</p>
-						<h3>2、临床意义</h3>
-						<p>LAP是一种蛋白酶，肝内含量很丰富。肝内外胆淤时，LAP活力显著增高，尤其在恶性胆淤时，其活力随病情进展而持续增高。试剂对肝道梗阻及胰腺癌的诊断有价值。肝坏疽、肝肿瘤、肝炎、乳腺癌、 肝癌、胆道癌、胰腺癌、子宫内膜癌、卵巢癌明显增高。肝硬化、传染性肝炎可中度增高，常为参考值的2-4倍。阻塞性黄疸明显增高，常达参考值5倍以上，并出现在胆红素或ALP上升之前。</p>
-						<h3>3、诊断方法</h3>
-						<p>二甲氨基苯甲醛显色法：样品中的亮氨酸氨基肽酶作用于L-亮氨酸-β-萘胺，水解产物β-萘胺与二甲氨基苯甲醛反应形成偶氮化合物，根据β-萘胺的生成量推算此酶的活性。</p>
-						<h3>4、产品描述</h3>
-						<p>样品中的LAP经催化水解底物L-亮氨酰-P-硝基苯胺，生成亮氨酸和对硝基苯胺，反应系统在405nm处吸光度上升，通过监测其上升的速率即可得出样品中LAP的活性。</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!--content-end-->
 		
 		<!--footer-->
-		<div class="footer ">
-			<ul class="max-Width clearfix">
-				<li>
-					<a href="">走进伊普诺康</a>
-					<a href="">企业概况</a>
-					<a href="">企业文化</a>
-					<a href="">发展历程</a>
-					<a href="">企业荣誉</a>
-					<a href="">企业责任</a>
-				</li>
-				<li>
-					<a href="">产品中心</a>
-					<a href="">系列产品</a>
-					<a href="">特色产品</a>
-					<a href="">新品推荐</a>
-					<a href="">品质管理</a>
-				</li>
-				<li>
-					<a href="">资讯中心</a>
-					<a href="">企业新闻</a>
-					<a href="">行业资讯</a>
-					<a href="">会展信息</a>
-					<a href="">文献汇编</a>
-				</li>				
-				<li>
-					<a href="">人力资源</a>
-					<a href="">职业发展</a>
-					<a href="">人才理念</a>
-					<a href="">福利待遇</a>
-					<a href="">人才招聘</a>
-				</li>
-				<li>
-					<a href="">联系我们</a>
-					<a href="">联系我们</a>
-				</li>
-				<li>
-					<div class="footer-weixin">
-						<img src="style/images/weixin.png">
-					</div>
-				</li>
-			</ul>			
-		</div>
-		<div class="copy">
-			<p>Copyright 2015-2017 All rights reserved. 安徽伊普诺康生物技术股份有限公司</p>
-		</div>
+		<div class="footerPage"></div>
+		<!--footer-end-->
 	</body>
+	<script>
+		$(".headerPage").load("header.html");
+		$(".footerPage").load('footer.html')
+	</script>
 
 </html>
