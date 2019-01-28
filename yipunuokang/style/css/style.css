@@ -73,6 +73,7 @@
 .swiper-container-project .swiper-button-next{
 	background-image: url(../images/next.png);
 }
+
 /*.product-box {
 	width: 180px;
 	height: 180px;
@@ -472,9 +473,6 @@
 	width: 500px;
 }
 
-/*#issues a {
-	color: #4092F4;
-}*/
 
 #issues .more {
 	left: 360px;
@@ -1055,6 +1053,60 @@
 	z-index: 10;
 }
 
+.honor-list{
+	width: 600px;
+	margin: 0 auto;
+}
+
+#honor-list{
+	width: 600px;
+	height: 460px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+		
+.gallery-thumbs {
+	height: 20%;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+	width: 25%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+	opacity: 1;
+}
+#honor-list .honor-pic img{
+	width: 600px;
+	height: 400px;
+}
+#honor-list .swiper-slide p{
+	text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+#honor-list .small-pic{
+	width: 142px;
+	height: 132px;
+}
+
+.honor-list .swiper-button-next, .swiper-button-prev{
+	background-color:#767676;
+	background-size: 18px 34px;
+	margin-top: -56px;
+}
+.honor-list  .swiper-button-prev{
+	background-image: url(../images/prev.png);
+}
+.honor-list .swiper-button-next{
+	background-image: url(../images/next.png);
+}
 /*产品*/
 
 #product .list li{
@@ -1416,9 +1468,6 @@
 	width: 25%;
 	text-align: center;
 }
-
-
-
 
 
 .recruitment .left{
