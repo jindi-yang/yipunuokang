@@ -1287,6 +1287,7 @@
 
 /*人才招聘*/
 
+
 .hire li{
 	float: left;
 	width: 68px;
@@ -1395,6 +1396,35 @@
 	width: 25%;
 	text-align: center;
 }
+
+
+
+
+
+.recruitment .left{
+	width: 600px;
+	overflow: auto;
+	height: auto;
+}
+.recruitment .left h3{
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.recruitment .right{
+	width: 400px;
+}
+.recruitment .hr-title{
+	margin-bottom: 10px;
+}
+.hr-title span{
+	margin-right: 30px;
+}
+
+.recruitment .caption{
+	font-weight: bold;
+	margin: 10px 0;
+}
+
 /*产品详情*/
 /*#product-details .min-width{
 	width: 900px;

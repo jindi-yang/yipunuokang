@@ -162,6 +162,9 @@ select {
 .bottom-distance{
 	padding-bottom: 70px;
 }
+.top-distance{
+	padding-top: 70px;
+}
 .small-txt {
 	color: #999;
 	font-size: 12px;
