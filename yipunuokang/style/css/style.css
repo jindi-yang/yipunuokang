@@ -1131,6 +1131,22 @@
 	position: relative;
 }
 
+#product .special-project-list li{
+	float: left;
+	width: 350px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+}
+#product li.margin{
+	margin-right: 0px !important;
+}
+#product .special-project-list li div{
+	width: 350px;
+	height: 300px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
 #product .special-project .swiper-slide div{
 	width: 360px;
 	height: 300px;
@@ -1138,8 +1154,18 @@
 	overflow: hidden;
 	margin-bottom: 10px;
 }
+#product .special-project-list li div img{
+	transition: all .3s ease-in-out;
+}
 .special-project .swiper-slide div img{
 	transition: all .3s ease-in-out;
+}
+
+#product .special-project-list li:hover img{
+	transform: scale(1.1);
+}
+#product .special-project-list li:hover a{
+	color: #00A0E8;
 }
 .special-project .swiper-slide:hover img{
 	transform: scale(1.1);
