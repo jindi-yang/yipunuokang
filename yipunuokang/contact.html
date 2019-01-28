@@ -177,19 +177,26 @@
 		
 		addMarker();
 
+		
 		//添加marker标记
 		function addMarker() {
-			map.clearMap();
+//			map.clearMap();
 			var marker = new AMap.Marker({
 				map: map,
 				position: [117.380020, 31.791520]
 			});
+			
+			
+			
 			//鼠标点击marker弹出自定义的信息窗体
-			AMap.event.addListener(marker, 'click', function() {
-				infoWindow.open(map, marker.getPosition());
-			});
-		}
+//			AMap.event.addListener(marker, 'click', function() {
+//				infoWindow.open(map, marker.getPosition());
+//			});
 
+		}
+		
+		
+		
 		//实例化信息窗体
 		var title = '安徽伊普诺康生物科技有限公司',
 			content = [];
@@ -201,7 +208,7 @@
 			content: createInfoWindow(title, content.join("<br/>")),
 			offset: new AMap.Pixel(16, -45)
 		});
-
+		infoWindow.open(map,new AMap.LngLat(117.380020, 31.791520));
 		//构建自定义信息窗体
 		function createInfoWindow(title, content) {
 			var info = document.createElement("div");
