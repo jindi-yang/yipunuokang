@@ -7,10 +7,9 @@
 		<link rel="stylesheet" href="style/css/common.css" />
 		<link rel="stylesheet" href="style/plugin/swiper/css/swiper.min.css" />
 		<link rel="stylesheet" href="style/css/style.css" />
-		<script type="text/javascript" src="style/plugin/swiper/js/swiper.min.js"></script>
+		<script type="text/javascript" src="style/plugin/swiper/js/swiper.min.js" ></script>
 		<script type="text/javascript" src="style/js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=2436bd03123e7d151b1ef7743e095c58"></script>
-
+		
 	</head>
 
 	<body>
@@ -77,7 +76,7 @@
 							<a href="talent.html">人才招聘</a>
 						</li>
 						<li>
-							<a href="contact.html" class="active">联系我们</a>
+							<a href="contact.html"  class="active">联系我们</a>
 						</li>
 					</ul>
 				</div>
@@ -97,23 +96,22 @@
 		<div id="contact" class="background-color bottom-distance">
 			<!--<div class="banner banner-small"></div>-->
 			<!--轮播banner-->
-			<div class="swiper-container swiper-banner banner-small">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
-					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
-					<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+				<div class="swiper-container swiper-banner banner-small">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+						<div class="swiper-slide"><img src="style/images/banner_home.jpg"></div>
+					</div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-
+			
 			<div class="title">
 				<h2>联系我们</h2>
 				<h3>CONTACT US<i class="left-line"></i><i class="right-line"></i></h3>
 			</div>
 			<div class="max-width">
 				<div class="map">
-					<div id="container"></div>
-					
+					<img src="style/images/map.png">
 				</div>
 				<div class="form clearfix">
 					<div class="contact-left fl">
@@ -132,18 +130,17 @@
 							<label>邮箱：</label>
 							<input type="email" placeholder="" name="email" value="" class="email">
 							<label>电话：</label>
-							<input type="tel" placeholder="" maxlength="11" name="telphone" value="">
+							<input type="tel" placeholder="" maxlength="11" name="telphone" value="" >
 							<div class="text">
 								<label>内容：</label>
 								<textarea cols="80" rows="4" placeholder=""></textarea>
 							</div>
-
+							
 							<a href="##" class="submit">提交</a>
 						</form>
 					</div>
 				</div>
 			</div>
-			
 
 		</div>
 		<!--内容结束-->
@@ -154,7 +151,7 @@
 	</body>
 	<script>
 		$(".footerPage").load('footer.html')
-
+		
 		//首页轮播
 		var swiper = new Swiper('.swiper-banner', {
 			autoplay: false,
@@ -167,85 +164,5 @@
 				clickable: true,
 			}
 		});
-
-		//地图初始化时，在地图上添加一个marker标记,鼠标点击marker可弹出自定义的信息窗体
-		var map = new AMap.Map("container", {
-			resizeEnable: true,
-			center: [117.380020, 31.791520],
-			zoom: 14
-		});
-		
-		addMarker();
-
-		//添加marker标记
-		function addMarker() {
-			map.clearMap();
-			var marker = new AMap.Marker({
-				map: map,
-				position: [117.380020, 31.791520]
-			});
-			//鼠标点击marker弹出自定义的信息窗体
-			AMap.event.addListener(marker, 'click', function() {
-				infoWindow.open(map, marker.getPosition());
-			});
-		}
-
-		//实例化信息窗体
-		var title = '安徽伊普诺康生物科技有限公司',
-			content = [];
-		content.push("<img src='style/images/company_1.jpg'>地址：安徽省合肥市包河经济开发区繁华大道吉林路东南角联东U谷18号楼");
-		content.push("电话：400-0551-795");
-
-		var infoWindow = new AMap.InfoWindow({
-			isCustom: true, //使用自定义窗体
-			content: createInfoWindow(title, content.join("<br/>")),
-			offset: new AMap.Pixel(16, -45)
-		});
-
-		//构建自定义信息窗体
-		function createInfoWindow(title, content) {
-			var info = document.createElement("div");
-			info.className = "custom-info input-card content-window-card";
-
-			//可以通过下面的方式修改自定义窗体的宽高
-			//info.style.width = "400px";
-			// 定义顶部标题
-			var top = document.createElement("div");
-			var titleD = document.createElement("div");
-			var closeX = document.createElement("img");
-			top.className = "info-top";
-			titleD.innerHTML = title;
-			closeX.src = "style/images/close.gif";
-			closeX.onclick = closeInfoWindow;
-
-			top.appendChild(titleD);
-			top.appendChild(closeX);
-			info.appendChild(top);
-
-			// 定义中部内容
-			var middle = document.createElement("div");
-			middle.className = "info-middle";
-			middle.style.backgroundColor = 'white';
-			middle.innerHTML = content;
-			info.appendChild(middle);
-
-			// 定义底部内容
-			var bottom = document.createElement("div");
-			bottom.className = "info-bottom";
-			bottom.style.position = 'relative';
-			bottom.style.top = '0px';
-			bottom.style.margin = '0 auto';
-			var sharp = document.createElement("img");
-			sharp.src = "style/images/sharp.png";
-			bottom.appendChild(sharp);
-			info.appendChild(bottom);
-			return info;
-		}
-
-		//关闭信息窗体
-		function closeInfoWindow() {
-			map.clearInfoWindow();
-		}
 	</script>
-
 </html>
